@@ -28,8 +28,9 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 `)
         await conn.sendMessage(from,{image:{url:"https://github.com/Sadarulk/QueenMatheeDB/blob/main/botlogos/facebook.jpg?raw=true"},caption:fb},{quoted:mek})
         //send video (hd,sd)
-        await conn.sendMessage(from,{video: {url:data.result.HD},mimetype:"video/mp4",caption: `*HD QUALITY*\n\n${cap}` },{quoted: mek})
-        await conn.sendMessage(from,{video: {url:data.result.Normal_video},mimetype:"video/mp4",caption: `*SD QUALITY*\n\n${cap}` },{quoted: mek})  
+        await conn.sendMessage(from, { video: { url: data.result.HD }, mimetype: "video/mp4", caption: `*HD QUALITY*\n\n${cap}` }, { quoted: mek })
+        await conn.sendMessage(from, { video: { url: data.result.SD }, mimetype: "video/mp4", caption: `*SD QUALITY*\n\n${cap}` }, { quoted: mek })  
+          
     } catch (e) {
         console.log(e)
         reply(`${e}`)
