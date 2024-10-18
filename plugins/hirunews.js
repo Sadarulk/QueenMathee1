@@ -15,11 +15,11 @@ let data = await fetchJson(`https://dark-yasiya-api-new.vercel.app/news/hiru`)
 
 let news = `*_QUEEN MATHEE HIRU NEWS 📰_*
 
-┌───────────────────
-├ • *Title:* ${data.result.title}
-├ • *News:* ${data.result.desc}
-├ • *Link:* ${data.result.url}
-└───────────────────
+■ *Title:* ${data.result.title}
+ 
+■ *News:* ${data.result.desc}
+ 
+■ *Link:* ${data.result.url}
 
 > ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ`
 
