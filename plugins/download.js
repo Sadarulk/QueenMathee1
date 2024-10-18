@@ -29,11 +29,11 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
     try {
         if (!q && !q.startsWith("https://")) return reply("*_Please give me a facebook url._*")
         //fetch data from api  
-        let data = await fetchJson(`${baseUrl}/api/fdown?url=${q}`)
+        let data = await fetchJson(`https://api.fgmods.xyz/api/downloader/fbdl?url=${q}&apikey=nRHt2lt5`)
         await conn.sendMessage(from,{image:{url:"https://github.com/Sadarulk/QueenMatheeDB/blob/main/botlogos/facebook.jpg?raw=true"},caption:fb},{quoted:mek})
         //send video (hd,sd)
-        await conn.sendMessage(from,{video: {url:data.data.hd},mimetype:"video/mp4",caption: `*HD QUALITY*\n\n${cap}` },{quoted: mek})
-        await conn.sendMessage(from,{video: {url:data.data.sd},mimetype:"video/mp4",caption: `*SD QUALITY*\n\n${cap}` },{quoted: mek})  
+        await conn.sendMessage(from,{video: {url:data.result.HD},mimetype:"video/mp4",caption: `HD QUALITY\n\n${cap}` },{quoted: mek})
+        
     } catch (e) {
         console.log(e)
         reply(`${e}`)
