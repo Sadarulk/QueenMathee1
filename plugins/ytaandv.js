@@ -19,10 +19,7 @@ if (!q && !q.startsWith("https://")) return reply("*_Please give me a youtube ur
 
 let yta = `*_QUEEN MATHEE AUDIO DOWNLOADER_* 📥
 
-┌───────────────────
-├ ℹ️ *Title:* ${data.result.title}
-├ 👁️‍🗨️ *Quality:* ${data.result.quality}
-└───────────────────
+Your song is downloading...
 
 > ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ`
 
@@ -55,10 +52,7 @@ if (!q && !q.startsWith("https://")) return reply("*_Please give me a youtube ur
 
 let ytv = `*_QUEEN MATHEE VIDEO DOWNLOADER_* 📥
 
-┌───────────────────
-├ ℹ️ *Title:* ${data.result.title}
-├ 👁️‍🗨️ *Quality:* ${data.result.quality}
-└───────────────────
+Your video is downloading...
 
 > ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ`
 
