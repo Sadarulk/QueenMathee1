@@ -15,7 +15,6 @@ main: '',
 download: '',
 ai: '',
 owner: '',
-convert: '',
 other: ''
 };
 
@@ -45,10 +44,6 @@ ${menu.ai}╰───────────●
 │❯ OWNER COMMANDS ❮
 │   ───────
 ${menu.owner}╰───────────●
-╭───────────●
-│❯ CONVERT COMMANDS ❮
-│   ───────
-${menu.convert}╰───────────●
 ╭───────────●
 │❯ OTHER COMMANDS ❮
 │   ───────
