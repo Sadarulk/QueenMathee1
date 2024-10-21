@@ -21,7 +21,7 @@ let baseUrl;
 cmd({
     pattern: "fb",
     alias: ["facebook"],
-    desc: "download facebook videos",
+    desc: "download fb videos",
     category: "download",
     filename: __filename
 },
@@ -29,11 +29,11 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
     try {
         if (!q && !q.startsWith("https://")) return reply("*_Please give me a facebook url._*")
         //fetch data from api  
-        let data = await fetchJson(`https://api.fgmods.xyz/api/downloader/fbdl?url=${q}&apikey=nRHt2lt5`)
+        let data = await fetchJson(`${baseUrl}/api/fdown?url=${q}`)
         await conn.sendMessage(from,{image:{url:"https://github.com/Sadarulk/QueenMatheeDB/blob/main/botlogos/facebook.jpg?raw=true"},caption:fb},{quoted:mek})
         //send video (hd,sd)
-        await conn.sendMessage(from,{video: {url:data.result.HD},mimetype:"video/mp4",caption: `HD QUALITY\n\n${cap}` },{quoted: mek})
-          
+        await conn.sendMessage(from,{video: {url:data.data.hd},mimetype:"video/mp4",caption: `*HD QUALITY*\n\n${cap}` },{quoted: mek})
+        await conn.sendMessage(from,{video: {url:data.data.sd},mimetype:"video/mp4",caption: `*SD QUALITY*\n\n${cap}` },{quoted: mek})  
     } catch (e) {
         console.log(e)
         reply(`${e}`)
@@ -77,9 +77,9 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
     try {
         if (!q && !q.startsWith("https://")) return reply("*_Please give me a google drive url._*")
         //fetch data from api  
-        let data = await fetchJson(`https://api.fgmods.xyz/api/downloader/gdrive?url=${q}&apikey=nRHt2lt5`)
+        let data = await fetchJson(`${baseUrl}/api/gdrivedl?url=${q}`)
         await conn.sendMessage(from,{image:{url:"https://github.com/Sadarulk/QueenMatheeDB/blob/main/botlogos/gdrive.jpg?raw=true"},caption:gdrive},{quoted:mek})
-        await conn.sendMessage(from, { document: { url: data.result.downloadUrl }, fileName: data.result.fileName, mimetype: data.result.mimetype, caption: cap }, { quoted: mek })                                                                                                                   
+        await conn.sendMessage(from, { document: { url: data.data.download }, fileName: data.data.fileName, mimetype: data.data.mimeType, caption: cap }, { quoted: mek })                                                                                                                 
     } catch (e) {
         console.log(e)
         reply(`${e}`)
@@ -119,10 +119,10 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
     try {
         if (!q && !q.startsWith("https://")) return reply("*_Please give me a tiktok url._*")
         //fetch data from api  
-        let data = await fetchJson(`https://api.fgmods.xyz/api/downloader/tiktok?url=${q}&apikey=nRHt2lt5`)
+        let data = await fetchJson(`${baseUrl}/api/tiktokdl?url=${q}`)
         await conn.sendMessage(from,{image:{url:"https://github.com/Sadarulk/QueenMatheeDB/blob/main/botlogos/tiktok.jpg?raw=true"},caption:tt},{quoted:mek})
-        await conn.sendMessage(from, { video: { url: data.result.play }, mimetype: "video/mp4", caption: `without WaterMark\n\n${cap}` }, { quoted: mek })
-        
+        await conn.sendMessage(from, { video: { url: data.data.no_wm }, mimetype: "video/mp4", caption: `*without WaterMark*\n\n${cap}` }, { quoted: mek })
+        await conn.sendMessage(from, { video: { url: data.data.wm }, mimetype: "video/mp4", caption: `*with WaterMark*\n\n${cap}` }, { quoted: mek }) 
         
 
 } catch (e) {
