@@ -21,7 +21,7 @@ let baseUrl;
 cmd({
     pattern: "fb",
     alias: ["facebook"],
-    desc: "download fb videos",
+    desc: "download facebook videos",
     category: "download",
     filename: __filename
 },
