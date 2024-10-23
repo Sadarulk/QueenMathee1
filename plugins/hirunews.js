@@ -18,8 +18,8 @@ let news = `*_QUEEN MATHEE HIRU NEWS 📰_*
 ■ *${data.result.title}*
  
 ${data.result.desc}
- 
-■ ${data.result.url}
+
+${data.result.url}
 
 > ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ`
 
