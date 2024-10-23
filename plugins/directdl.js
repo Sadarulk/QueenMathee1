@@ -3,7 +3,7 @@ const {cmd , commands} = require('../command')
 const { fetchJson } = require('../lib/functions')
 
 cmd({
-    pattern: "dl",
+    pattern: "dlv",
     desc: "download direct url",
     category: "download",
     filename: __filename
