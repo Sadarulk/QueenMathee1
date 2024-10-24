@@ -61,7 +61,6 @@ try{
 if(!q) return reply ("*_Please give me a title or url._*")
 const search = await yts(q)
 const data = search.videos[0];
-const url = data.url
 
 let desc = `
 *_QUEEN MATHEE VIDEO DOWNLOADER_* 📥
@@ -72,6 +71,7 @@ let desc = `
 ├ 👁️‍🗨️ *Views:* ${data.views}
 ├ 🕘 *Duration:* ${data.timestamp}
 ├ 📌 *Upload on:* ${data.ago}
+├ 🖇️ *Link:* ${data.url}
 └───────────────────
 
 > ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ`
@@ -79,13 +79,12 @@ await conn.sendMessage(from,{image:{url: data.thumbnail},caption:desc},{quoted:m
     
 //download video
 
-let down = await fg.ytv(url)
-let downloadUrl = down.dl_url
+let detail = await fetchJson(`https://api.ibrahimadams.us.kg/api/download/ytmp4?url=${data.url}&apikey=ibraah-help`)
 
 //send video+document
 
-await conn.sendMessage(from,{video: {url:downloadUrl},mimetype:"video/mp4"},{quoted:mek})
-await conn.sendMessage(from,{document: {url:downloadUrl},mimetype:"video/mp4",fileName:data.title + ".mp4",caption:"> ɢᴇɴᴇʀᴀᴛᴇᴅ ʙʏ ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡᴀ ʙᴏᴛ"},{quoted:mek})
+await conn.sendMessage(from,{video: {url:detail.result.download_url},mimetype:"video/mp4"},{quoted:mek})
+await conn.sendMessage(from,{document: {url:detail.result.download_url},mimetype:"video/mp4",fileName:data.title + ".mp4",caption:"> ɢᴇɴᴇʀᴀᴛᴇᴅ ʙʏ ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡᴀ ʙᴏᴛ"},{quoted:mek})
     
 }catch(e){
 console.log(e)
