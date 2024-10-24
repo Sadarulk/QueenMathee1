@@ -18,7 +18,7 @@ if(!q) return reply("*_Please give me a subtitle name_*")
 const sub_list = await fetchJson(`${apilink}/search/baiscope?text=${q}`)
 if(sub_list.result.length < 0) return await reply("*_Can't find subtitle !_*")
 
-const sub_info = await fetchJson(`${apilink}/download/baiscope?url=${sub_list.result[0].data.url}`)
+const sub_info = await fetchJson(`${apilink}/download/baiscope?url=${sub_list.result[0].url}`)
 
 const msg = `*_QUEEN MATHEE SUBTITLE DOWNLOADER 📥_*
 
