@@ -15,10 +15,10 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 
 if(!q) return reply("*_Please give me a text._*")
 
-const xv_list = await fetchJson(${apilink}/search/xvideo?q=${q})
+const xv_list = await fetchJson(`${apilink}/search/xvideo?q=${q`)
 if(xv_list.result.length < 0) return await reply("*_Not results found !_*")
 
-const xv_info = await fetchJson(${apilink}/download/xvideo?url=${xv_list.result[0].url})
+const xv_info = await fetchJson(`${apilink}/download/xvideo?url=${xv_list.result[0].url}`)
 
 const msg = `*_QUEEN MATHEE XVIDEO DOWNLOADER 📥_*
 
