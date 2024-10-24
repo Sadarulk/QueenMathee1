@@ -15,10 +15,10 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 
  if(!q) return await reply("*_Please give me a song name._*")
 
-const sc_list = await fetchJson(${apilink}/search/soundcloud?text=${q}&apikey=nRHt2lt5)
+const sc_list = await fetchJson(`${apilink}/search/soundcloud?text=${q}&apikey=nRHt2lt5`)
 if(sc_list.result.length < 0) return await reply("Not results found !")
 
-const sc_info = await fetchJson(${apilink}/downloader/soundcloud?url=${sc_list.result[0].url}&apikey=nRHt2lt5)
+const sc_info = await fetchJson(`${apilink}/downloader/soundcloud?url=${sc_list.result[0].url}&apikey=nRHt2lt5`)
 
 const msg = `*_QUEEN MATHEE SOUNDCLOUD DOWNLOADER_* 📥
 
