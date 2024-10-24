@@ -27,6 +27,7 @@ let desc = `
 ├ 👁️‍🗨️ *Views:* ${data.views}
 ├ 🕘 *Duration:* ${data.timestamp}
 ├ 📌 *Upload on:* ${data.ago}
+├ 🖇️ *Link:* ${data.url}
 └───────────────────
 
 > ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ`
@@ -34,7 +35,7 @@ await conn.sendMessage(from,{image:{url: data.thumbnail},caption:desc},{quoted:m
     
 //download audio
 
-let detail = await fetchJson(`https://api-pink-venom.vercel.app/api/ytdl?url=${data.url}`)
+let detail = await fetchJson(`https://api.ibrahimadams.us.kg/api/download/ytmp3?url=${data.url}&apikey=ibraah-help`)
 
 //send audio+document
 
