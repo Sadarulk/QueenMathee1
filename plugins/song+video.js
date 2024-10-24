@@ -15,7 +15,6 @@ try{
 if(!q) return reply ("*_Please give me a title or url._*")
 const search = await yts(q)
 const data = search.videos[0];
-const url = data.url
 
 let desc = `
 *_QUEEN MATHEE AUDIO DOWNLOADER_* 📥
@@ -33,13 +32,12 @@ await conn.sendMessage(from,{image:{url: data.thumbnail},caption:desc},{quoted:m
     
 //download audio
 
-let down = await fg.yta(url)
-let downloadUrl = down.dl_url
+let detail = await fetchJson(`https://api-pink-venom.vercel.app/api/ytdl?url=${data.url}`)
 
 //send audio+document
 
-await conn.sendMessage(from,{audio: {url:downloadUrl},mimetype:"audio/mpeg"},{quoted:mek})
-await conn.sendMessage(from,{document: {url:downloadUrl},mimetype:"audio/mpeg",fileName:data.title + ".mp3",caption:"> ɢᴇɴᴇʀᴀᴛᴇᴅ ʙʏ ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡᴀ ʙᴏᴛ"},{quoted:mek})
+await conn.sendMessage(from,{audio: {url:detail.result.download_url},mimetype:"audio/mpeg"},{quoted:mek})
+await conn.sendMessage(from,{document: {url:detail.result.download_url},mimetype:"audio/mpeg",fileName:data.title + ".mp3",caption:"> ɢᴇɴᴇʀᴀᴛᴇᴅ ʙʏ ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡᴀ ʙᴏᴛ"},{quoted:mek})
     
 }catch(e){
 console.log(e)
