@@ -26,32 +26,17 @@ const msg = `*_QUEEN MATHEE MOVIE DOWNLOADER_* 📥
 
 *► Released Date:* ${mv_info.result.data.date}
 
+*► Country:* ${mv_info.result.data.country}
+
 *► Runtime:* ${mv_info.result.data.runtime}
 
 *► IMDB Rate:* ${mv_info.result.data.imdbRate}
-
-Reply,
-
-1 
-2 
-3 
 
 > ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ`
 
 await conn.sendMessage(from,{image:{url: mv_info.result.data.images[0]},caption:msg},{quoted:mek})
 
-if (reply === '1' || reply === '2' || reply === '3') {
-            let send;
-            if (reply === '1') {
-                send = 'mv_info.result.data.dl_links[3].link';
-            } else if (reply === '2') {
-                send = 'mv_info.result.data.dl_links[4].link';
-            } else if (reply === '3') {
-                send = 'mv_info.result.data.dl_links[5].link';
-            } 
-
-}
-await conn.sendMessage(from,{document: {url:send},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption:"> ɢᴇɴᴇʀᴀᴛᴇᴅ ʙʏ ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡᴀ ʙᴏᴛ"},{quoted:mek})
+await conn.sendMessage(from,{document: {url:mv_info.result.data.dl_links[5].link},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption:"> ɢᴇɴᴇʀᴀᴛᴇᴅ ʙʏ ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡᴀ ʙᴏᴛ"},{quoted:mek})
           
 
 }catch(e){
