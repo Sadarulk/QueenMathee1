@@ -40,18 +40,18 @@ Reply,
 
 await conn.sendMessage(from,{image:{url: mv_info.result.data.images[0]},caption:msg},{quoted:mek})
 
-if (msgContent === '1' || msgContent === '2' || msgContent === '3') {
-            let reply;
-            if (msgContent === '1') {
-                reply = 'mv_info.result.data.dl_links[3].link';
-            } else if (msgContent === '2') {
-                reply = 'mv_info.result.data.dl_links[4].link';
-            } else if (msgContent === '3') {
-                reply = 'mv_info.result.data.dl_links[5].link';
+if (reply === '1' || reply === '2' || reply === '3') {
+            let send;
+            if (reply === '1') {
+                send = 'mv_info.result.data.dl_links[3].link';
+            } else if (reply === '2') {
+                send = 'mv_info.result.data.dl_links[4].link';
+            } else if (reply === '3') {
+                send = 'mv_info.result.data.dl_links[5].link';
             } 
 
 }
-await conn.sendMessage(from,{document: {url:reply},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption:"> ɢᴇɴᴇʀᴀᴛᴇᴅ ʙʏ ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡᴀ ʙᴏᴛ"},{quoted:mek})
+await conn.sendMessage(from,{document: {url:send},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption:"> ɢᴇɴᴇʀᴀᴛᴇᴅ ʙʏ ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡᴀ ʙᴏᴛ"},{quoted:mek})
           
 
 }catch(e){
