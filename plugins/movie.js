@@ -32,11 +32,9 @@ const msg = `*_QUEEN MATHEE MOVIE DOWNLOADER_* 📥
 
 Reply,
 
-1 for ${mv_info.result.data.dl_links[3].quality} - ${mv_info.result.data.dl_links[3].size}
-
-2 for ${mv_info.result.data.dl_links[4].quality} - ${mv_info.result.data.dl_links[4].size}
-
-3 for ${mv_info.result.data.dl_links[5].quality} - ${mv_info.result.data.dl_links[5].size}
+1 
+2 
+3 
 
 > ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ`
 
