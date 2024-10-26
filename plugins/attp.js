@@ -13,9 +13,9 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 
 if (!q) return reply("*_Please give me a text._*")
 
-        
+     let attp = https://api.fgmods.xyz/api/maker/attp?text=${q}&apikey=nRHt2lt5
 
-       await conn.sendMessage(from,{sticker: { url : https://api.fgmods.xyz/api/maker/attp?text=${q}&apikey=nRHt2lt5},package: 'QueenMathee'},{ quoted: mek })
+       await conn.sendMessage(from,{sticker: { url : attp},package: 'QueenMathee'},{ quoted: mek })
           
 
 }catch(e){
