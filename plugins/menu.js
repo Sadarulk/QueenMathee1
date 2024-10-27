@@ -15,6 +15,7 @@ main: '',
 download: '',
 ai: '',
 owner: '',
+movie: '',
 other: ''
 };
 
@@ -44,6 +45,10 @@ ${menu.ai}╰───────────●
 │❯ OWNER COMMANDS ❮
 │   ───────
 ${menu.owner}╰───────────●
+╭───────────●
+│❯ MOVIE COMMANDS ❮
+│   ───────
+${menu.movie}╰───────────●
 ╭───────────●
 │❯ OTHER COMMANDS ❮
 │   ───────
