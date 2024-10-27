@@ -38,6 +38,8 @@ const msg = `*_QUEEN MATHEE MOVIE DETAILS_* 🔎
 
 🤵‍♂ *Director* : ${mv_info.result.data.director}
 
+🖇️ *Link* : ${mv_list.result.data[0].link}
+
 > ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ`
 
 await conn.sendMessage(from,{image:{url: mv_info.result.data.images[0]},caption:msg},{quoted:mek})  
