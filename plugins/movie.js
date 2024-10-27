@@ -16,7 +16,6 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
     if(!q) return reply("*_Please give me a movie name_*")
 
 const mv_list = await fetchJson(`${apilink}/movie/sinhalasub/search?text=${q}`)
-if(mv_list.result.length < 0) return await reply("*_Not movie found !_*")
 
 const mv_info = await fetchJson(`${apilink}/movie/sinhalasub/movie?url=${mv_list.result.data[0].link}`)
 
