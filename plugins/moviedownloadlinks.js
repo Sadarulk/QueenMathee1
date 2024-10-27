@@ -15,7 +15,7 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 
 const mv_info = await fetchJson(`${apilink}/movie/sinhalasub/movie?url=${q}`)
 
-await m.reply(${mv_info.result.data.dl_links[0].link})
+        return reply(`${mv_info.result.data.dl_links[0].link}`)
         
 }catch(e){
 console.log(e)
