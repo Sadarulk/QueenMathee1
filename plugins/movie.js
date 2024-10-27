@@ -6,8 +6,8 @@ const apilink = 'https://dark-yasiya-api-new.vercel.app'
 
 cmd({
     pattern: "movie",
-    desc: "download movies",
-    category: "download",
+    desc: "search movie",
+    category: "movie",
     filename: __filename
 },
 async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
@@ -16,28 +16,31 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
     if(!q) return reply("*_Please give me a movie name_*")
 
 const mv_list = await fetchJson(`${apilink}/movie/sinhalasub/search?text=${q}`)
-if(mv_list.result.length < 0) return await reply("*_Not results found !_*")
+if(mv_list.result.length < 0) return await reply("*_Not movie found !_*")
 
 const mv_info = await fetchJson(`${apilink}/movie/sinhalasub/movie?url=${mv_list.result.data[0].link}`)
 
-const msg = `*_QUEEN MATHEE MOVIE DOWNLOADER_* 📥
+const msg = `*_QUEEN MATHEE MOVIE DETAILS_* 🔎
 
-*► Movie Name:* ${mv_info.result.data.title}
+🍟 *Movie Name :* ${mv_info.result.data.title}
 
-*► Released Date:* ${mv_info.result.data.date}
+🧿 *Release Date :* ${mv_info.result.data.date}
 
-*► Country:* ${mv_info.result.data.country}
+🌍 *Country :* ${mv_info.result.data.country}
 
-*► Runtime:* ${mv_info.result.data.runtime}
+⏱ *Duration :* ${mv_info.result.data.runtime}
 
-*► IMDB Rate:* ${mv_info.result.data.imdbRate}
+🎀 *Categories :* ${mv_info.result.data.category}
+
+⭐ *IMDB Rate :* ${mv_info.result.data.imdbRate}
+
+🔮 *IMDB Count:* ${mv_info.result.data.imdbVoteCount}
+
+🤵‍♂ *Director* : ${mv_info.result.data.director}
 
 > ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ`
 
-await conn.sendMessage(from,{image:{url: mv_info.result.data.images[0]},caption:msg},{quoted:mek})
-
-await conn.sendMessage(from,{document: {url:mv_info.result.data.dl_links[5].link},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption:"> ɢᴇɴᴇʀᴀᴛᴇᴅ ʙʏ ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡᴀ ʙᴏᴛ"},{quoted:mek})
-          
+await conn.sendMessage(from,{image:{url: mv_info.result.data.images[0]},caption:msg},{quoted:mek})  
 
 }catch(e){
 console.log(e)
