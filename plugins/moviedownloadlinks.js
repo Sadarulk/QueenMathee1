@@ -23,3 +23,183 @@ reply(`${e}`)
 
 }
 })
+
+cmd({
+    pattern: "mvd2",
+    desc: "get movie download links",
+    filename: __filename
+},
+async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
+    try {
+    if (!q && !q.startsWith("https://")) return reply("*_Please give me a sinhalasub.lk url._*")
+
+const mv_info = await fetchJson(`${apilink}/movie/sinhalasub/movie?url=${q}`)
+
+        return reply(`${mv_info.result.data.dl_links[1].link}`)
+        
+}catch(e){
+console.log(e)
+reply(`${e}`)
+
+}
+})
+
+cmd({
+    pattern: "mvd3",
+    desc: "get movie download links",
+    filename: __filename
+},
+async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
+    try {
+    if (!q && !q.startsWith("https://")) return reply("*_Please give me a sinhalasub.lk url._*")
+
+const mv_info = await fetchJson(`${apilink}/movie/sinhalasub/movie?url=${q}`)
+
+        return reply(`${mv_info.result.data.dl_links[2].link}`)
+        
+}catch(e){
+console.log(e)
+reply(`${e}`)
+
+}
+})
+
+cmd({
+    pattern: "mvd4",
+    desc: "get movie download links",
+    filename: __filename
+},
+async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
+    try {
+    if (!q && !q.startsWith("https://")) return reply("*_Please give me a sinhalasub.lk url._*")
+
+const mv_info = await fetchJson(`${apilink}/movie/sinhalasub/movie?url=${q}`)
+
+        return reply(`${mv_info.result.data.dl_links[3].link}`)
+        
+}catch(e){
+console.log(e)
+reply(`${e}`)
+
+}
+})
+
+cmd({
+    pattern: "mvd5",
+    desc: "get movie download links",
+    filename: __filename
+},
+async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
+    try {
+    if (!q && !q.startsWith("https://")) return reply("*_Please give me a sinhalasub.lk url._*")
+
+const mv_info = await fetchJson(`${apilink}/movie/sinhalasub/movie?url=${q}`)
+
+        return reply(`${mv_info.result.data.dl_links[4].link}`)
+        
+}catch(e){
+console.log(e)
+reply(`${e}`)
+
+}
+})
+
+cmd({
+    pattern: "mvd6",
+    desc: "get movie download links",
+    filename: __filename
+},
+async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
+    try {
+    if (!q && !q.startsWith("https://")) return reply("*_Please give me a sinhalasub.lk url._*")
+
+const mv_info = await fetchJson(`${apilink}/movie/sinhalasub/movie?url=${q}`)
+
+        return reply(`${mv_info.result.data.dl_links[5].link}`)
+        
+}catch(e){
+console.log(e)
+reply(`${e}`)
+
+}
+})
+
+cmd({
+    pattern: "mvd7",
+    desc: "get movie download links",
+    filename: __filename
+},
+async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
+    try {
+    if (!q && !q.startsWith("https://")) return reply("*_Please give me a sinhalasub.lk url._*")
+
+const mv_info = await fetchJson(`${apilink}/movie/sinhalasub/movie?url=${q}`)
+
+        return reply(`${mv_info.result.data.dl_links[6].link}`)
+        
+}catch(e){
+console.log(e)
+reply(`${e}`)
+
+}
+})
+
+cmd({
+    pattern: "mvd8",
+    desc: "get movie download links",
+    filename: __filename
+},
+async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
+    try {
+    if (!q && !q.startsWith("https://")) return reply("*_Please give me a sinhalasub.lk url._*")
+
+const mv_info = await fetchJson(`${apilink}/movie/sinhalasub/movie?url=${q}`)
+
+        return reply(`${mv_info.result.data.dl_links[7].link}`)
+        
+}catch(e){
+console.log(e)
+reply(`${e}`)
+
+}
+})
+
+cmd({
+    pattern: "mvd9",
+    desc: "get movie download links",
+    filename: __filename
+},
+async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
+    try {
+    if (!q && !q.startsWith("https://")) return reply("*_Please give me a sinhalasub.lk url._*")
+
+const mv_info = await fetchJson(`${apilink}/movie/sinhalasub/movie?url=${q}`)
+
+        return reply(`${mv_info.result.data.dl_links[8].link}`)
+        
+}catch(e){
+console.log(e)
+reply(`${e}`)
+
+}
+})
+
+cmd({
+    pattern: "mvd10",
+    desc: "get movie download links",
+    filename: __filename
+},
+async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
+    try {
+    if (!q && !q.startsWith("https://")) return reply("*_Please give me a sinhalasub.lk url._*")
+
+const mv_info = await fetchJson(`${apilink}/movie/sinhalasub/movie?url=${q}`)
+
+        return reply(`${mv_info.result.data.dl_links[9].link}`)
+        
+}catch(e){
+console.log(e)
+reply(`${e}`)
+
+}
+})
