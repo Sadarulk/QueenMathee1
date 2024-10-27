@@ -15,12 +15,6 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 
 const mv_info = await fetchJson(`${apilink}/movie/sinhalasub/movie?url=${q}`)
 
-        const data = `*Quality -* ${mv_info.result.data.dl_links[0].quality}
-        
-*Size -* ${mv_info.result.data.dl_links[0].size}
-        
-*Link -* ${mv_info.result.data.dl_links[0].link}`
-        
         return reply(`*Quality -* ${mv_info.result.data.dl_links[0].quality}\n\n*Size -* ${mv_info.result.data.dl_links[0].size}\n\n*Link -* ${mv_info.result.data.dl_links[0].link}`)
         
 }catch(e){
@@ -41,7 +35,7 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 
 const mv_info = await fetchJson(`${apilink}/movie/sinhalasub/movie?url=${q}`)
 
-        return reply(`${mv_info.result.data.dl_links[1].link}`)
+        return reply(`*Quality -* ${mv_info.result.data.dl_links[1].quality}\n\n*Size -* ${mv_info.result.data.dl_links[1].size}\n\n*Link -* ${mv_info.result.data.dl_links[1].link}`)
         
 }catch(e){
 console.log(e)
@@ -61,7 +55,7 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 
 const mv_info = await fetchJson(`${apilink}/movie/sinhalasub/movie?url=${q}`)
 
-        return reply(`${mv_info.result.data.dl_links[2].link}`)
+        return reply(`*Quality -* ${mv_info.result.data.dl_links[2].quality}\n\n*Size -* ${mv_info.result.data.dl_links[2].size}\n\n*Link -* ${mv_info.result.data.dl_links[2].link}`)
         
 }catch(e){
 console.log(e)
@@ -81,7 +75,7 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 
 const mv_info = await fetchJson(`${apilink}/movie/sinhalasub/movie?url=${q}`)
 
-        return reply(`${mv_info.result.data.dl_links[3].link}`)
+        return reply(`*Quality -* ${mv_info.result.data.dl_links[3].quality}\n\n*Size -* ${mv_info.result.data.dl_links[3].size}\n\n*Link -* ${mv_info.result.data.dl_links[3].link}`)
         
 }catch(e){
 console.log(e)
@@ -101,7 +95,7 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 
 const mv_info = await fetchJson(`${apilink}/movie/sinhalasub/movie?url=${q}`)
 
-        return reply(`${mv_info.result.data.dl_links[4].link}`)
+        return reply(`*Quality -* ${mv_info.result.data.dl_links[4].quality}\n\n*Size -* ${mv_info.result.data.dl_links[4].size}\n\n*Link -* ${mv_info.result.data.dl_links[4].link}`)
         
 }catch(e){
 console.log(e)
@@ -121,7 +115,7 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 
 const mv_info = await fetchJson(`${apilink}/movie/sinhalasub/movie?url=${q}`)
 
-        return reply(`${mv_info.result.data.dl_links[5].link}`)
+        return reply(`*Quality -* ${mv_info.result.data.dl_links[5].quality}\n\n*Size -* ${mv_info.result.data.dl_links[5].size}\n\n*Link -* ${mv_info.result.data.dl_links[5].link}`)
         
 }catch(e){
 console.log(e)
@@ -141,7 +135,7 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 
 const mv_info = await fetchJson(`${apilink}/movie/sinhalasub/movie?url=${q}`)
 
-        return reply(`${mv_info.result.data.dl_links[6].link}`)
+        return reply(`*Quality -* ${mv_info.result.data.dl_links[6].quality}\n\n*Size -* ${mv_info.result.data.dl_links[6].size}\n\n*Link -* ${mv_info.result.data.dl_links[6].link}`)
         
 }catch(e){
 console.log(e)
@@ -161,7 +155,7 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 
 const mv_info = await fetchJson(`${apilink}/movie/sinhalasub/movie?url=${q}`)
 
-        return reply(`${mv_info.result.data.dl_links[7].link}`)
+        return reply(`*Quality -* ${mv_info.result.data.dl_links[7].quality}\n\n*Size -* ${mv_info.result.data.dl_links[7].size}\n\n*Link -* ${mv_info.result.data.dl_links[7].link}`)
         
 }catch(e){
 console.log(e)
@@ -181,7 +175,7 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 
 const mv_info = await fetchJson(`${apilink}/movie/sinhalasub/movie?url=${q}`)
 
-        return reply(`${mv_info.result.data.dl_links[8].link}`)
+        return reply(`*Quality -* ${mv_info.result.data.dl_links[8].quality}\n\n*Size -* ${mv_info.result.data.dl_links[8].size}\n\n*Link -* ${mv_info.result.data.dl_links[8].link}`)
         
 }catch(e){
 console.log(e)
@@ -201,7 +195,7 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 
 const mv_info = await fetchJson(`${apilink}/movie/sinhalasub/movie?url=${q}`)
 
-        return reply(`${mv_info.result.data.dl_links[9].link}`)
+        return reply(`*Quality -* ${mv_info.result.data.dl_links[9].quality}\n\n*Size -* ${mv_info.result.data.dl_links[9].size}\n\n*Link -* ${mv_info.result.data.dl_links[9].link}`)
         
 }catch(e){
 console.log(e)
