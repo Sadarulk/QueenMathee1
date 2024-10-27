@@ -20,6 +20,15 @@ const msg = `*_QUEEN MATHEE MOVIE DOWNLOAD LINKS_* 📥
 ${mv_info.result.data.title}
 
 ${mv_info.result.data.dl_links[0].link}
+${mv_info.result.data.dl_links[1].link}
+${mv_info.result.data.dl_links[2].link}
+${mv_info.result.data.dl_links[3].link}
+${mv_info.result.data.dl_links[4].link}
+${mv_info.result.data.dl_links[5].link}
+${mv_info.result.data.dl_links[6].link}
+${mv_info.result.data.dl_links[7].link}
+${mv_info.result.data.dl_links[8].link}
+${mv_info.result.data.dl_links[9].link}
 
 > ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ`
 
