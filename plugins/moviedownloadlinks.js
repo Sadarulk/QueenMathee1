@@ -21,7 +21,7 @@ const mv_info = await fetchJson(`${apilink}/movie/sinhalasub/movie?url=${q}`)
         
 *Link -* ${mv_info.result.data.dl_links[0].link}`
         
-        return reply(`data`)
+        return reply(`*Quality -* ${mv_info.result.data.dl_links[0].quality}\n\n*Size -* ${mv_info.result.data.dl_links[0].size}\n\n*Link -* ${mv_info.result.data.dl_links[0].link}`)
         
 }catch(e){
 console.log(e)
