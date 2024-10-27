@@ -5,7 +5,7 @@ const { cmd, commands } = require('../command')
 const apilink = 'https://dark-yasiya-api-new.vercel.app'
 
 cmd({
-    pattern: "mvdlink",
+    pattern: "mvd1",
     desc: "get movie download links",
     filename: __filename
 },
@@ -15,16 +15,8 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 
 const mv_info = await fetchJson(`${apilink}/movie/sinhalasub/movie?url=${q}`)
 
-const msg = `*_QUEEN MATHEE MOVIE DOWNLOAD LINKS_* 📥
-
-${mv_info.result.data.title}
-
-${mv_info.result.data.dl_links.link}
-
-> ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ`
-
-await conn.sendMessage(from,{image:{url: mv_info.result.data.images[0]},caption:msg},{quoted:mek})  
-
+await m.reply(${mv_info.result.data.dl_links[0].link})
+        
 }catch(e){
 console.log(e)
 reply(`${e}`)
