@@ -13,7 +13,7 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
     try {
     
    const data = [
-{ title: "MR NIMA WA", no: "94715166712" };
+{ title: "MR NIMA WA", no: "94715166712" }
 { title: "Sadaru", no: "94701814946" }
 
 ]
