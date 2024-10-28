@@ -15,7 +15,7 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 
 const mv_info = await fetchJson(`${apilink}/movie/sinhalasub/episode?url=${q}`)
 
-        await conn.sendMessage(from,{document: {url:mv_info.result.data.dl_link[0].link},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption:"> ɢᴇɴᴇʀᴀᴛᴇᴅ ʙʏ ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡᴀ ʙᴏᴛ"},{quoted:mek})
+        await conn.sendMessage(from,{document: {url:mv_info.result.data.dl_links[0].link},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption:"> ɢᴇɴᴇʀᴀᴛᴇᴅ ʙʏ ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡᴀ ʙᴏᴛ"},{quoted:mek})
 
 }catch(e){
 console.log(e)
@@ -35,7 +35,7 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 
 const mv_info = await fetchJson(`${apilink}/movie/sinhalasub/episode?url=${q}`)
 
-        await conn.sendMessage(from,{document: {url:mv_info.result.data.dl_link[1].link},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption:"> ɢᴇɴᴇʀᴀᴛᴇᴅ ʙʏ ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡᴀ ʙᴏᴛ"},{quoted:mek})
+        await conn.sendMessage(from,{document: {url:mv_info.result.data.dl_links[1].link},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption:"> ɢᴇɴᴇʀᴀᴛᴇᴅ ʙʏ ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡᴀ ʙᴏᴛ"},{quoted:mek})
         
 }catch(e){
 console.log(e)
@@ -55,7 +55,7 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 
 const mv_info = await fetchJson(`${apilink}/movie/sinhalasub/episode?url=${q}`)
 
-        await conn.sendMessage(from,{document: {url:mv_info.result.data.dl_link[2].link},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption:"> ɢᴇɴᴇʀᴀᴛᴇᴅ ʙʏ ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡᴀ ʙᴏᴛ"},{quoted:mek})
+        await conn.sendMessage(from,{document: {url:mv_info.result.data.dl_links[2].link},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption:"> ɢᴇɴᴇʀᴀᴛᴇᴅ ʙʏ ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡᴀ ʙᴏᴛ"},{quoted:mek})
         
 }catch(e){
 console.log(e)
@@ -75,7 +75,7 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 
 const mv_info = await fetchJson(`${apilink}/movie/sinhalasub/episode?url=${q}`)
 
-        await conn.sendMessage(from,{document: {url:mv_info.result.data.dl_link[3].link},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption:"> ɢᴇɴᴇʀᴀᴛᴇᴅ ʙʏ ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡᴀ ʙᴏᴛ"},{quoted:mek})
+        await conn.sendMessage(from,{document: {url:mv_info.result.data.dl_links[3].link},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption:"> ɢᴇɴᴇʀᴀᴛᴇᴅ ʙʏ ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡᴀ ʙᴏᴛ"},{quoted:mek})
         
 }catch(e){
 console.log(e)
@@ -95,7 +95,7 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 
 const mv_info = await fetchJson(`${apilink}/movie/sinhalasub/episode?url=${q}`)
 
-        await conn.sendMessage(from,{document: {url:mv_info.result.data.dl_link[4].link},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption:"> ɢᴇɴᴇʀᴀᴛᴇᴅ ʙʏ ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡᴀ ʙᴏᴛ"},{quoted:mek})
+        await conn.sendMessage(from,{document: {url:mv_info.result.data.dl_links[4].link},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption:"> ɢᴇɴᴇʀᴀᴛᴇᴅ ʙʏ ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡᴀ ʙᴏᴛ"},{quoted:mek})
         
 }catch(e){
 console.log(e)
@@ -115,7 +115,7 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 
 const mv_info = await fetchJson(`${apilink}/movie/sinhalasub/episode?url=${q}`)
 
-        await conn.sendMessage(from,{document: {url:mv_info.result.data.dl_link[5].link},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption:"> ɢᴇɴᴇʀᴀᴛᴇᴅ ʙʏ ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡᴀ ʙᴏᴛ"},{quoted:mek})
+        await conn.sendMessage(from,{document: {url:mv_info.result.data.dl_links[5].link},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption:"> ɢᴇɴᴇʀᴀᴛᴇᴅ ʙʏ ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡᴀ ʙᴏᴛ"},{quoted:mek})
         
 }catch(e){
 console.log(e)
@@ -135,7 +135,7 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 
 const mv_info = await fetchJson(`${apilink}/movie/sinhalasub/episode?url=${q}`)
 
-        await conn.sendMessage(from,{document: {url:mv_info.result.data.dl_link[6].link},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption:"> ɢᴇɴᴇʀᴀᴛᴇᴅ ʙʏ ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡᴀ ʙᴏᴛ"},{quoted:mek})
+        await conn.sendMessage(from,{document: {url:mv_info.result.data.dl_links[6].link},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption:"> ɢᴇɴᴇʀᴀᴛᴇᴅ ʙʏ ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡᴀ ʙᴏᴛ"},{quoted:mek})
         
 }catch(e){
 console.log(e)
@@ -155,7 +155,7 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 
 const mv_info = await fetchJson(`${apilink}/movie/sinhalasub/episode?url=${q}`)
 
-        await conn.sendMessage(from,{document: {url:mv_info.result.data.dl_link[7].link},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption:"> ɢᴇɴᴇʀᴀᴛᴇᴅ ʙʏ ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡᴀ ʙᴏᴛ"},{quoted:mek})
+        await conn.sendMessage(from,{document: {url:mv_info.result.data.dl_links[7].link},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption:"> ɢᴇɴᴇʀᴀᴛᴇᴅ ʙʏ ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡᴀ ʙᴏᴛ"},{quoted:mek})
         
 }catch(e){
 console.log(e)
@@ -175,7 +175,7 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 
 const mv_info = await fetchJson(`${apilink}/movie/sinhalasub/episode?url=${q}`)
 
-        await conn.sendMessage(from,{document: {url:mv_info.result.data.dl_link[8].link},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption:"> ɢᴇɴᴇʀᴀᴛᴇᴅ ʙʏ ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡᴀ ʙᴏᴛ"},{quoted:mek})
+        await conn.sendMessage(from,{document: {url:mv_info.result.data.dl_links[8].link},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption:"> ɢᴇɴᴇʀᴀᴛᴇᴅ ʙʏ ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡᴀ ʙᴏᴛ"},{quoted:mek})
         
 }catch(e){
 console.log(e)
@@ -195,7 +195,7 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 
 const mv_info = await fetchJson(`${apilink}/movie/sinhalasub/episode?url=${q}`)
 
-        await conn.sendMessage(from,{document: {url:mv_info.result.data.dl_link[9].link},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption:"> ɢᴇɴᴇʀᴀᴛᴇᴅ ʙʏ ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡᴀ ʙᴏᴛ"},{quoted:mek})
+        await conn.sendMessage(from,{document: {url:mv_info.result.data.dl_links[9].link},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption:"> ɢᴇɴᴇʀᴀᴛᴇᴅ ʙʏ ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡᴀ ʙᴏᴛ"},{quoted:mek})
         
 }catch(e){
 console.log(e)
