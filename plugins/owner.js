@@ -20,7 +20,7 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 
 for(let index = 0; index < array.length; index++){
   
-    await conn.sendMessage(from, { text: ⚖️ ${array[index].title}\n\n🖇️ ${array[index].no} }, {quoted: mek})
+    await conn.sendMessage(from, { text: `⚖️ ${array[index].title}\n\n🖇️ ${array[index].no}` }, {quoted: mek})
 }
 
 
