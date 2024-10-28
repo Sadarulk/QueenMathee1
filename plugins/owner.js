@@ -13,12 +13,17 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
     try {
     
    const data = [
-{ title: "MR NIMA WA", no: "94715166712" }
+{ title: "MR NIMA WA", no: "94715166712" };
+{ title: "Sadaru", no: "94701814946" }
 
 ]
 for(let index = 0; index < data.length; index ++)
 
-return reply(`${data[index].no}`)
+
+        const msg = `Name = ${data[index].title}
+        Number = ${data[index].no}`
+        
+await conn.sendMessage(from, { text: msg },{quoted: mek})
 
 
 
