@@ -17,7 +17,7 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 { title: "Sadaru", no: "94701814946" }
 
 ]
-for(let index = 0; index < data.length; index ++)
+for(let index = 0; index < data.length; index ++);
 
 
  let msg = `Name = ${data[index].title}
