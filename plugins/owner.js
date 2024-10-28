@@ -20,7 +20,7 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 for(let index = 0; index < data.length; index ++)
 
 
-        const msg = `Name = ${data[index].title}
+ const msg = `Name = ${data[index].title}
         Number = ${data[index].no}`
         
 await conn.sendMessage(from, { text: msg },{quoted: mek})
