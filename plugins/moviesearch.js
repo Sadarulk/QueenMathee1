@@ -22,7 +22,9 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, reply }) => {
         // Loop through the array and log the movie titles and links
         for(let index = 0; index < array.length; index++) {
 
-await conn.sendMessage(from, { text: `Movie name: ${array[index].title}\n\nLink: ${array[index].link}` }, {quoted: mek})
+const msg = `*Movie Name:* ${array[index].title}\n*Link:* ${array[index].link}\n\n`
+            
+await conn.sendMessage(from, { text: msg }, {quoted: mek})
             
             console.log(`Movie ${index + 1}:`);
             console.log(`Title: ${array[index].title}`);
