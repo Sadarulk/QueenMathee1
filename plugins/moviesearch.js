@@ -18,12 +18,11 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 const array = await fetchJson(`${apilink}/movie/sinhalasub/search?text=${q}`)
 if(array.result.length < 0) return await reply("*_Not results found !_*")
         
-for(let index = 0; index < array.length; index++)
+for(let index = 0; index < array.length; index++){
 
-   
-reply(`${array.result.data[index].link}`)
+   await conn.sendMessage(from, { text: `⚖️ ${array.result.data[index].title}\n\n🖇️ ${array.result.data[index].link}` }, {quoted: mek})
 
-         
+}
         
 }catch(e){
 console.log(e)
