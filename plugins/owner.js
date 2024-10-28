@@ -18,13 +18,9 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
   { title: "YouTube", no: "www.youtube.com/@rocky999_ff" }
 ];
 
-for(let index = 0; index < array.length; index++){
+for(let index = 0; index < array.length; index++);
   
     await conn.sendMessage(from, { text: `⚖️ ${array[index].title}\n\n🖇️ ${array[index].no}` }, {quoted: mek})
-}
-
-
-
 
 }catch(e){
 console.log(e)
