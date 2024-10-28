@@ -15,12 +15,13 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
     
     if(!q) return reply("*_Please give me a movie name_*")
 
-const array = await fetchJson(`${apilink}/movie/sinhalasub/search?text=${q}`)
+const mv = await fetchJson(`${apilink}/movie/sinhalasub/search?text=${q}`)
+        const array = (`${mv.result.data}`)
 
         
 for(let index = 0; index < array.length; index++)
 
-   await conn.sendMessage(from, { text: `⚖️ ${array.result.data[index].title}\n\n🖇️ ${array.result.data[index].link}` }, {quoted: mek})
+   await conn.sendMessage(from, { text: `⚖️ ${array[index].title}\n\n🖇️ ${array[index].link}` }, {quoted: mek})
 
 
         
