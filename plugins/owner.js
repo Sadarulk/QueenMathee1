@@ -16,11 +16,11 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 { title: "MR NIMA WA", no: "94715166712" }
 
 ]
-for(let index = 0; index < array.length; index ++)
+for(let index = 0; index < data.length; index ++)
 
 return reply(`${data[index].no}`)
 
-await m.reply(msg)
+
 
 }catch(e){
 console.log(e)
