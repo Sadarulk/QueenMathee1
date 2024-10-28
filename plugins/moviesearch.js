@@ -21,7 +21,7 @@ if(array.result.length < 0) return await reply("*_Not results found !_*")
 for(let index = 0; index < array.length; index++)
 
    
-reply(`⚖️ ${array.result.data[index].link`)
+reply(`${array.result.data[index].link`)
 
          
         
