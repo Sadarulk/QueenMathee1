@@ -13,13 +13,13 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
     try {
     
    const array = [
-  { title: "MR NIMA WA", no: "94715166712" },
-  { title: "MR NIMA TG", no: "https://t.me/mrnimaofc_yt" },
-  { title: "MR NIMA YT", no: "yotube.com/@MRNIMAOFC" }
+  { title: "Sadaru", no: "https://wa.me/94701814946" },
+  { title: "Whatsapp Group", no: "https://chat.whatsapp.com/DTy4uNnbcO6FLkJJ0uIM1y" },
+  { title: "YouTube", no: "www.youtube.com/@rocky999_ff" }
 ];
 
 for(let index = 0; index < array.length; index++){
-  reply(`${array[index].title}`)
+  reply(`⚖️ ${array[index].title}\n\n🖇️ ${array[index].no}`)
 }
 
 
