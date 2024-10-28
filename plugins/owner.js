@@ -18,13 +18,12 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
   { title: "MR NIMA YT", no: "yotube.com/@MRNIMAOFC" }
 ];
 
-for(let index = 0; index < array.length; index++);
+for(let index = 0; index < array.length; index++){
+  console.log(index);
+  console.log(array[index].title);
+  console.log(array[index].no);
+}
 
-
- let msg = `Name = ${array[index].title}
-        Number = ${array[index].no}`
-        
-await conn.sendMessage(from, { text: msg },{quoted: mek})
 
 
 
