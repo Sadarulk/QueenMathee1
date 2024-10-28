@@ -21,8 +21,8 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 for(let index = 0; index < array.length; index++)
 
 
- let msg = `Name = ${data[index].title}
-        Number = ${data[index].no}`
+ let msg = `Name = ${array[index].title}
+        Number = ${array[index].no}`
         
 await conn.sendMessage(from, { text: msg },{quoted: mek})
 
