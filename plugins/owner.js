@@ -12,12 +12,13 @@ cmd({
 async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
     try {
     
-   const data = [
-{ title: "MR NIMA WA", no: "94715166712" },
-{ title: "Sadaru", no: "94701814946" }
+   const array = [
+  { title: "MR NIMA WA", no: "94715166712" },
+  { title: "MR NIMA TG", no: "https://t.me/mrnimaofc_yt" },
+  { title: "MR NIMA YT", no: "yotube.com/@MRNIMAOFC" }
+];
 
-]
-for(let index = 0; index < data.length; index ++);
+for(let index = 0; index < array.length; index++)
 
 
  let msg = `Name = ${data[index].title}
