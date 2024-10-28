@@ -18,18 +18,11 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 const mv_list = await fetchJson(`${apilink}/movie/sinhalasub/search?text=${q}`)
 if(mv_list.result.length < 0) return await reply("*_Not results found !_*")
         
-for(let index = 0; index < mv_list.length; index++);
+for(let index = 0; index < mv_list.length; index++){
     
-const msg = `*_QUEEN MATHEE MOVIE SEARCH 🔎_*
-
-*+ Title :* ${mv_list.result.data[index].title}
-*+ Year :* ${mv_list.result.data[index].year}
-*+ Link :* ${mv_list.result.data[index].link}
-
-> ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ`
-
-await m.reply(msg)
-
+reply(`⚖️ ${mv_list.result.data[index].title\n\n🖇️ ${mv_list.result.data[index].link\n\n> ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ`)
+         }
+        
 }catch(e){
 console.log(e)
 reply(`${e}`)
