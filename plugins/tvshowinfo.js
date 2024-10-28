@@ -21,26 +21,10 @@ const mv_info = await fetchJson(`${apilink}/movie/sinhalasub/tvshow?url=${q}`)
 
 	for(let index = 0; index < array.length; index++)
 
-const msg = `*_QUEEN MATHEE TVSHOW DETAILS_* 🔎
 
-🍟 *TV Show Name :* ${mv_info.result.data.title}
+const msg = `*S & E :* ${array[index].title}\n\n*Date :* ${array[index].date}\n\n*Link :* ${array[index].episode_link}`
 
-🧿 *Release Date :* ${mv_info.result.data.date}
-
-🎀 *Categories :* ${mv_info.result.data.category}
-
-⭐ *IMDB Rate :* ${mv_info.result.data.imdb}
-
-🤵‍♂ *Director* : ${mv_info.result.data.director}
-
-📝 *Description:* ${mv_info.result.data.desc}
-
-> ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ`
-
-const msg2 = `*S & E :* ${array[index].title}\n\n*Date :* ${array[index].date}\n\n*Link :* ${array[index].episode_link}`
-
-await conn.sendMessage(from,{image:{url: mv_info.result.data.image},caption:msg},{quoted:mek})  
-await conn.sendMessage(from, { text: msg2 }, {quoted: mek})
+await conn.sendMessage(from, { text: msg }, {quoted: mek})
 
 }catch(e){
 console.log(e)
