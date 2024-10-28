@@ -17,8 +17,12 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 
 const mv = await fetchJson(`${apilink}/movie/sinhalasub/search?text=${q}`)
        
-console.log(mv.result.data)
+const array = [mv.result.data]
         
+        for(let index = 0; index < array.length; index++)
+            
+            console.log(array[index].title)
+            console.log(array[index].link)
 
         
 }catch(e){
