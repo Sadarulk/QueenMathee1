@@ -18,7 +18,7 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
   { title: "MR NIMA YT", no: "yotube.com/@MRNIMAOFC" }
 ];
 
-for(let index = 0; index < array.length; index++)
+for(let index = 0; index < array.length; index++);
 
 
  let msg = `Name = ${array[index].title}
