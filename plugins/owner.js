@@ -19,9 +19,7 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 ];
 
 for(let index = 0; index < array.length; index++){
-  console.log(index);
-  console.log(array[index].title);
-  console.log(array[index].no);
+  reply(`${array[index].title}`)
 }
 
 
