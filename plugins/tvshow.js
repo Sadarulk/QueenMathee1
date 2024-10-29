@@ -16,9 +16,6 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 
 const ts = await fetchJson(`${apilink}/movie/sinhalasub/tvshow?url=${q}`)
 
-
-        const array = ts.result.data.episodes;
-
 	    const msg = `*_QUEEN MATHEE TVSHOW DETAILS_* 🔎
 
 🍟 *TV Show Name :* ${ts.result.data.title}
