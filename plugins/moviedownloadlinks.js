@@ -18,12 +18,11 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
     if (!q && !q.startsWith("https://")) return reply("*_Please give me a sinhalasub.lk url._*")
 
 const mv = await fetchJson(`${apilink}/movie/sinhalasub/movie?url=${q}`)
-const mvt = await fetchJson(`${apilink}/movie/sinhalasub/movie?url=${q}`)
 
 
 const array = mv.result.data.dl_links;
 
-let dt = `*_${mvt.result.data.title} DL links ⬇️_*\n\n`
+let dt = `*_${mv.result.data.title} DL links ⬇️_*\n\n`
 let cap = `\n\n> ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ`
 
 const result = array.map((movie, index) => `${index + 1}. *Quality :* ${array[index].quality}\n\n*Size :* ${array[index].size}\n\n*Link :* ${array[index].link}`).join("\n\n");
