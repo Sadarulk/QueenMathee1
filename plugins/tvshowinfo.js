@@ -30,9 +30,7 @@ const ts = await fetchJson(`${apilink}/movie/sinhalasub/tvshow?url=${q}`)
 
 ⭐ *IMDB Rate :* ${ts.result.data.imdb}
 
-🤵‍♂ *Director* : ${ts.result.data.director}
-
-📝 *Description :* ${ts.result.data.desc}\n\n\n`
+🤵‍♂ *Director* : ${ts.result.data.director}\n\n\n`
 
 	
 
