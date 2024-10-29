@@ -8,7 +8,7 @@ let cap = `\n\n> ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ`
 cmd({
     pattern: "mvsearch",
     desc: "search movies",
-    category: "movie",
+    category: "search",
     filename: __filename
 },
 async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, reply }) => {
