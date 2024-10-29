@@ -18,16 +18,16 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, reply }) => {
 
         // Assuming mv.result.data is an array
         const array = mv.result.data;
-if(mv.result.data.length < 0) return reply("*_Can't found this movie !_*")
+if(mv.result.data.length < 0) return reply("*_Can't find this movie !_*")
         // Loop through the array and log the movie titles and links
-        for(let index = 0; index < array.length; index++) {
-
-const msg = `*Movie Name :* ${array[index].title}\n\n*Link :* ${array[index].link}`
+        
             
-await conn.sendMessage(from, { text: msg }, {quoted: mek})
+const result = array.map((movie, index) => `${index + 1}. *Movie Name :* ${array[index].title}\n*Link :* ${array[index].link}`).join("\n\n");
+            
+await conn.sendMessage(from, { text: result }, {quoted: mek})
             
          
-        }
+        
 
     } catch(e) {
         // Log any errors that occur during the fetch or processing
