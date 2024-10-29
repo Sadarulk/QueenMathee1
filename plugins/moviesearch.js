@@ -28,8 +28,6 @@ const result = array.map((movie, index) => `*_QUEEN MATHEE MOVIE SEARCH 🔎_*${
             
 await conn.sendMessage(from, { text: result, cap }, {quoted: mek})
             
-         
-        
 
     } catch(e) {
         // Log any errors that occur during the fetch or processing
