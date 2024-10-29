@@ -27,7 +27,6 @@ await conn.sendMessage(from, { text: msg }, {quoted: mek})
 
             }
 
-       
 }catch(e){
 console.log(e)
 reply(`${e}`)
