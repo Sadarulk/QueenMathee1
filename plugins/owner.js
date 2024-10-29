@@ -5,25 +5,24 @@ const { cmd, commands } = require('../command')
 
 cmd({
     pattern: "owner",
-    desc: "search movies",
+    desc: "owner details",
     category: "main",
     filename: __filename
 },
 async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
     try {
     
-   const array = [
-  { title: "Sadaru", no: "https://wa.me/94701814946" },
-  { title: "Whatsapp Group", no: "https://chat.whatsapp.com/DTy4uNnbcO6FLkJJ0uIM1y" },
-  { title: "YouTube", no: "www.youtube.com/@rocky999_ff" }
-];
+   let msg = `🧑‍💻 *_Owner & Developer :_* Sadaru
 
-for(let index = 0; index < array.length; index++){
-  
-    await conn.sendMessage(from, { text: `⚖️ ${array[index].title}\n\n🖇️ ${array[index].no}` }, {quoted: mek})
-    }
+🪀 *_WhatsApp :_* wa.me/+94701814946
 
+🌐 *_From :_* Kurunegala
 
+📌 *_Student of :_* M.C.C
+
+> ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ`
+
+return reply(`${msg}`)
         
 }catch(e){
 console.log(e)
