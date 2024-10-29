@@ -26,10 +26,10 @@ let dt = `*_${mv.result.data.title} DL links ⬇️_*\n\n`
 let cap = `\n\n> ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ`
 
 if (!array || array.length === 0) {
-            return reply("Not download links in this movie.");
+            return reply("*_No download links in this movie._*");
         }
         
-const result = array.map((movie, index) => `${index + 1}. *Quality :* ${array[index].quality}\n\n*Size :* ${array[index].size}\n\n*Link :* ${array[index].link}`).join("\n\n");
+const result = array.map((movie, index) => `${index + 1}. *Quality :* ${array[index].quality}\n*Size :* ${array[index].size}\n*Link :* ${array[index].link}`).join("\n\n");
             
 await conn.sendMessage(from, { text: `${dt} ${result} ${cap}` }, {quoted: mek})
 
