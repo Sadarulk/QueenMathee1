@@ -2,6 +2,8 @@ const { fetchJson } = require('../lib/functions');
 const config = require('../config');
 const { cmd, commands } = require('../command');
 
+let cap = `\n\n> ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ`
+
 cmd({
     pattern: "mvsearch",
     desc: "search movies",
@@ -24,7 +26,7 @@ if(mv.result.data.length < 0) return reply("*_Can't find this movie !_*")
             
 const result = array.map((movie, index) => `*_QUEEN MATHEE MOVIE SEARCH 🔎_*${index + 1}. *Movie Name :* ${array[index].title}\n*Link :* ${array[index].link}`).join("\n\n");
             
-await conn.sendMessage(from, { text: `result\n\n> ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ`}, {quoted: mek})
+await conn.sendMessage(from, { text: result, cap }, {quoted: mek})
             
          
         
