@@ -14,14 +14,17 @@ cmd({
 async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, reply }) => {
     try {
         // Check if the user provided a movie name (query)
-        if(!q) return reply("Please give me a movie name");
+        if(!q) return reply("_Please give me a movie name._*");
 
         // Properly format the fetchJson URL request
         const mv = await fetchJson(`https://dark-yasiya-api-new.vercel.app/movie/sinhalasub/search?text=${q}`);
 
         // Assuming mv.result.data is an array
         const array = mv.result.data;
-if(mv.result.data.length < 0) return reply("*_Can't find this movie !_*")
+        
+ if (!array || array.length === 0) {
+            return reply("*_Can't find this movie._*");
+        }
         // Loop through the array and log the movie titles and links
         
             
