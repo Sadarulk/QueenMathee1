@@ -17,6 +17,12 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 
 const mv_list = await fetchJson(`${apilink}/movie/sinhalasub/search?text=${q}`)
 
+        const array = mv_list.result.data;
+        
+        if (!array || array.length === 0) {
+            return reply("*_Can't find this movie._*");
+        }
+
 const mv_info = await fetchJson(`${apilink}/movie/sinhalasub/movie?url=${mv_list.result.data[0].link}`)
 
 const msg = `*_QUEEN MATHEE MOVIE DETAILS_* 🔎
