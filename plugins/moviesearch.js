@@ -2,7 +2,7 @@ const { fetchJson } = require('../lib/functions');
 const config = require('../config');
 const { cmd, commands } = require('../command');
 
-let dt = `*_QUEEN MATHEE MOVIE SEARCH 🔎_*`
+let dt = `*_QUEEN MATHEE MOVIE SEARCH 🔎_*\n\n`
 let cap = `\n\n> ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ`
 
 cmd({
