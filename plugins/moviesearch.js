@@ -2,6 +2,7 @@ const { fetchJson } = require('../lib/functions');
 const config = require('../config');
 const { cmd, commands } = require('../command');
 
+let dt = `*_QUEEN MATHEE MOVIE SEARCH 🔎_*`
 let cap = `\n\n> ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ`
 
 cmd({
@@ -24,9 +25,9 @@ if(mv.result.data.length < 0) return reply("*_Can't find this movie !_*")
         // Loop through the array and log the movie titles and links
         
             
-const result = array.map((movie, index) => `*_QUEEN MATHEE MOVIE SEARCH 🔎_*${index + 1}. *Movie Name :* ${array[index].title}\n*Link :* ${array[index].link}`).join("\n\n");
+const result = array.map((movie, index) => `${index + 1}. *Movie Name :* ${array[index].title}\n*Link :* ${array[index].link}`).join("\n\n");
             
-await conn.sendMessage(from, { text: result, cap }, {quoted: mek})
+await conn.sendMessage(from, { text: `${dt} ${result} ${cap}` }, {quoted: mek})
             
 
     } catch(e) {
