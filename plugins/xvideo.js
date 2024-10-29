@@ -59,8 +59,6 @@ const msg = `*_QUEEN MATHEE XVIDEO DOWNLOADER 📥_*
 
 *👍 Likes:* ${xv_info.result.like}
 
-*📈 Size:* ${xv_info.result.size}
-
 > ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ`
 
 await conn.sendMessage(from,{image:{url: xv_info.result.image},caption:msg},{quoted:mek})
