@@ -12,6 +12,7 @@ try{
 const config = await readEnv();
 let menu = {
 main: '',
+search: '',
 download: '',
 ai: '',
 owner: '',
@@ -37,6 +38,10 @@ ${menu.main}╰───────────●
 │❯ DOWNLOAD COMMANDS ❮
 │   ───────
 ${menu.download}╰───────────●
+╭───────────●
+│❯ SEARCH COMMANDS ❮
+│   ───────
+${menu.search}╰───────────●
 ╭───────────●
 │❯ AI COMMANDS ❮
 │   ───────
