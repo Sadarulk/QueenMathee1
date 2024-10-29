@@ -14,7 +14,7 @@ cmd({
 async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, reply }) => {
     try {
         // Check if the user provided a movie name (query)
-        if(!q) return reply("_Please give me a movie name._*");
+        if(!q) return reply("*_Please give me a movie name._*");
 
         // Properly format the fetchJson URL request
         const mv = await fetchJson(`https://dark-yasiya-api-new.vercel.app/movie/sinhalasub/search?text=${q}`);
