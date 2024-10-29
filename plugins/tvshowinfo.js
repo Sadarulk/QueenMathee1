@@ -38,7 +38,8 @@ const ts = await fetchJson(`${apilink}/movie/sinhalasub/tvshow?url=${q}`)
 
 const result = array.map((movie, index) => `*Season & Episode :* ${array[index].title}\n*Date :* ${array[index].date}\n*Link :* ${array[index].episode_link}`).join("\n\n");
 		
-await conn.sendMessage(from, { text: `${msg} ${result} ${cap}` }, {quoted: mek})
+
+	    await conn.sendMessage(from,{image:{ url: ts.result.data.image },caption: `${msg} ${result} ${cap}` },{quoted:mek})
 
 
 
