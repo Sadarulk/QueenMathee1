@@ -6,7 +6,7 @@ const apilink = 'https://dark-yasiya-api-new.vercel.app'
 let cap = `\n\n> ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ`
 
 cmd({
-    pattern: "tvshow",
+    pattern: "tvshow2",
     desc: "get tvshow info",
     category: "movie",
     filename: __filename
