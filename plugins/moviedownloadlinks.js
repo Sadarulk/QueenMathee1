@@ -25,6 +25,10 @@ const array = mv.result.data.dl_links;
 let dt = `*_${mv.result.data.title} DL links ⬇️_*\n\n`
 let cap = `\n\n> ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ`
 
+if (!array || array.length === 0) {
+            return reply("Not download links in this movie.");
+        }
+        
 const result = array.map((movie, index) => `${index + 1}. *Quality :* ${array[index].quality}\n\n*Size :* ${array[index].size}\n\n*Link :* ${array[index].link}`).join("\n\n");
             
 await conn.sendMessage(from, { text: `${dt} ${result} ${cap}` }, {quoted: mek})
