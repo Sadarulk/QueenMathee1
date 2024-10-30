@@ -3,7 +3,7 @@ const {cmd , commands} = require('../command')
 const { fetchJson } = require('../lib/functions')
 
 cmd({
-    pattern: "join",
+    pattern: "test",
     desc: "forward msg",
     category: "other",
     filename: __filename
@@ -12,8 +12,21 @@ async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender
 try{
 
 
-const response = await conn.groupAcceptInvite("https://chat.whatsapp.com/JtldTEMulKr2ZcLUpXCOLd")
-console.log("joined to: " + response)
+const vcard = 'BEGIN:VCARD\n' // metadata of the contact card
+            + 'VERSION:3.0\n' 
+            + 'FN:Lakmal Sadaru\n' // full name
+            + 'ORG:Queen Mathee;\n' // the organization of the contact
+            + 'TEL;type=CELL;type=VOICE;waid=94701814946:+94 70181 4946\n' // WhatsApp ID + phone number
+            + 'END:VCARD'
+const sentMsg  = await conn.sendMessage(
+    id,
+    { 
+        contacts: { 
+            displayName: 'Sadaru', 
+            contacts: [{ vcard }] 
+        }
+    }
+)
     
 }catch(e){
 console.log(e)
