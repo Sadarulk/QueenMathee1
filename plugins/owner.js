@@ -4,7 +4,7 @@ const { cmd, commands } = require('../command')
 
 
 cmd({
-    pattern: "owner",
+    pattern: "dev",
     desc: "owner details",
     category: "main",
     filename: __filename
