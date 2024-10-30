@@ -18,6 +18,10 @@ if(!q) return reply ("*_Please give me a title or url._*")
 const search = await yts(q)
 const data = search.videos[0];
 
+    if (!data || data.length === 0) {
+            return reply("*_Can't find anything._*");
+        }
+
 let desc = `
 *_QUEEN MATHEE AUDIO DOWNLOADER_* 📥
 
@@ -61,6 +65,10 @@ try{
 if(!q) return reply ("*_Please give me a title or url._*")
 const search = await yts(q)
 const data = search.videos[0];
+
+     if (!data || data.length === 0) {
+            return reply("*_Can't find anything._*");
+        }
 
 let desc = `
 *_QUEEN MATHEE VIDEO DOWNLOADER_* 📥
