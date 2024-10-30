@@ -12,17 +12,8 @@ async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender
 try{
 
 
-const id = '94701814946@s.whatsapp.net' // the WhatsApp ID 
+await conn.updateBlockStatus("${q}", "block") // Block user
 
-// send a contact!
-const vcard = 'BEGIN:VCARD\n' // metadata of the contact card
-            + 'VERSION:3.0\n' 
-            + 'FN:Lakmal Sadaru\n' // full name
-            + 'ORG:Queen Mathee;\n' // the organization of the contact
-            + 'TEL;type=CELL;type=VOICE;waid=94701814946:+94 70181 4946\n' // WhatsApp ID + phone number
-            + 'END:VCARD'
-    
-await conn.sendMessage( id, { contacts: { displayName: 'Jeff', contacts: [{ vcard }] }})
 
     
 }catch(e){
