@@ -3,7 +3,7 @@ const {cmd , commands} = require('../command')
 const { fetchJson } = require('../lib/functions')
 
 cmd({
-    pattern: "send",
+    pattern: "join",
     desc: "forward msg",
     category: "other",
     filename: __filename
@@ -12,8 +12,8 @@ async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender
 try{
 
 
-const msg = getMessageFromStore('+94701814946@s.whatsapp.net', 'HSJHJWH7323HSJSJ') // implement this on your end
-await sock.sendMessage('+94741545187@s.whatsapp.net', { forward: msg }) // WA forward the message!
+const response = await sock.groupAcceptInvite("https://chat.whatsapp.com/JtldTEMulKr2ZcLUpXCOLd")
+console.log("joined to: " + response)
     
 }catch(e){
 console.log(e)
