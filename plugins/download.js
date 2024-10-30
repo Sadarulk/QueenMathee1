@@ -59,6 +59,11 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
         if (!q && !q.startsWith("https://")) return reply("*_Please give me a twitter url._*")
         //fetch data from api  
         let data = await fetchJson(`${baseUrl}/api/twitterdl?url=${q}`)
+
+if (!data || data.length === 0) {
+            return reply("*_Can't find anything._*");
+        }
+        
         await conn.sendMessage(from,{image:{url:"https://github.com/Sadarulk/QueenMatheeDB/blob/main/botlogos/twitter.jpg?raw=true"},caption:tw},{quoted:mek})
         //send video (hd,sd)
         await conn.sendMessage(from, { video: { url: data.data.data.HD }, mimetype: "video/mp4", caption: `*HD QUALITY*\n\n${cap}` }, { quoted: mek })
@@ -83,6 +88,11 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
         if (!q && !q.startsWith("https://")) return reply("*_Please give me a google drive url._*")
         //fetch data from api  
         let data = await fetchJson(`${baseUrl}/api/gdrivedl?url=${q}`)
+
+if (!data || data.length === 0) {
+            return reply("*_Can't find anything._*");
+        }
+        
         await conn.sendMessage(from,{image:{url:"https://github.com/Sadarulk/QueenMatheeDB/blob/main/botlogos/gdrive.jpg?raw=true"},caption:gdrive},{quoted:mek})
         await conn.sendMessage(from, { document: { url: data.data.download }, fileName: data.data.fileName, mimetype: data.data.mimeType, caption: cap }, { quoted: mek })                                                                                                                 
     } catch (e) {
@@ -104,6 +114,11 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
         if (!q && !q.startsWith("https://")) return reply("*_Please give me a mediafire url._*")
         //fetch data from api  
         let data = await fetchJson(`${baseUrl}/api/mediafiredl?url=${q}`)
+
+if (!data || data.length === 0) {
+            return reply("*_Can't find anything._*");
+        }
+        
         await conn.sendMessage(from,{image:{url:"https://github.com/Sadarulk/QueenMatheeDB/blob/main/botlogos/mediafire.jpg?raw=true"},caption:mfire},{quoted:mek})
         await conn.sendMessage(from,{ document:{url:data.data.link_1}, fileName:data.data.name, mimetype: data.data.file_type, caption:cap},{quoted: mek})                                                                                                                 
     } catch (e) {
@@ -125,6 +140,11 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
         if (!q && !q.startsWith("https://")) return reply("*_Please give me a tiktok url._*")
         //fetch data from api  
         let data = await fetchJson(`${baseUrl}/api/tiktokdl?url=${q}`)
+
+if (!data || data.length === 0) {
+            return reply("*_Can't find anything._*");
+        }
+        
         await conn.sendMessage(from,{image:{url:"https://github.com/Sadarulk/QueenMatheeDB/blob/main/botlogos/tiktok.jpg?raw=true"},caption:tt},{quoted:mek})
         await conn.sendMessage(from, { video: { url: data.data.no_wm }, mimetype: "video/mp4", caption: `*without WaterMark*\n\n${cap}` }, { quoted: mek })
         await conn.sendMessage(from, { video: { url: data.data.wm }, mimetype: "video/mp4", caption: `*with WaterMark*\n\n${cap}` }, { quoted: mek }) 
