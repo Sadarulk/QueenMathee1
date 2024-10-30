@@ -43,6 +43,10 @@ let detail = await fetchJson(`https://api.ibrahimadams.us.kg/api/download/ytmp3?
 
 //send audio+document
 
+if (!detail || detail.result.download_url.length === 0) {
+            return reply("*_Can't find anything._*");
+        }
+    
 await conn.sendMessage(from,{audio: {url:detail.result.download_url},mimetype:"audio/mpeg"},{quoted:mek})
 await conn.sendMessage(from,{document: {url:detail.result.download_url},mimetype:"audio/mpeg",fileName:data.title + ".mp3",caption:"> ɢᴇɴᴇʀᴀᴛᴇᴅ ʙʏ ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡᴀ ʙᴏᴛ"},{quoted:mek})
     
@@ -91,6 +95,10 @@ let detail = await fetchJson(`https://api.ibrahimadams.us.kg/api/download/ytmp4?
 
 //send video+document
 
+if (!detail || detail.result.download_url.length === 0) {
+            return reply("*_Can't find anything._*");
+        }
+    
 await conn.sendMessage(from,{video: {url:detail.result.download_url},mimetype:"video/mp4"},{quoted:mek})
 await conn.sendMessage(from,{document: {url:detail.result.download_url},mimetype:"video/mp4",fileName:data.title + ".mp4",caption:"> ɢᴇɴᴇʀᴀᴛᴇᴅ ʙʏ ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡᴀ ʙᴏᴛ"},{quoted:mek})
     
