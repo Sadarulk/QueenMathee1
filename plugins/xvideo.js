@@ -22,7 +22,7 @@ const xv = await fetchJson(`${apilink}/search/xvideo?q=${q}`)
 
 const array = xv.result;
         
-if (!xv || xv.length === 0) {
+if (!array || array.length === 0) {
             return reply("*_Can't find anything._*");
         }
 
