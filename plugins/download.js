@@ -30,6 +30,11 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
         if (!q && !q.startsWith("https://")) return reply("*_Please give me a facebook url._*")
         //fetch data from api  
         let data = await fetchJson(`${baseUrl}/api/fdown?url=${q}`)
+
+         if (!data || data.length === 0) {
+            return reply("*_Can't find anything._*");
+        }
+        
         await conn.sendMessage(from,{image:{url:"https://github.com/Sadarulk/QueenMatheeDB/blob/main/botlogos/facebook.jpg?raw=true"},caption:fb},{quoted:mek})
         //send video (hd,sd)
         await conn.sendMessage(from,{video: {url:data.data.hd},mimetype:"video/mp4",caption: `*HD QUALITY*\n\n${cap}` },{quoted: mek})
