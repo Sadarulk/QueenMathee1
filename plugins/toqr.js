@@ -14,7 +14,7 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 if (!q) return reply("*_Please give me a text._*")
 
           
-       await conn.sendMessage(from,{image:{url:https://api.nexoracle.com/image-creating/qr-code?apikey=d2d02440c70a98a415&text=${q}}},{quoted:mek})
+       await conn.sendMessage(from,{image:{url: `https://api.nexoracle.com/image-creating/qr-code?apikey=d2d02440c70a98a415&text=${q}`}},{quoted:mek})
 
 }catch(e){
 console.log(e)
