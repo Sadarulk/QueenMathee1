@@ -13,7 +13,7 @@ try{
 
 const msg = `*_This is forward test msg..._*`
 
-await sock.sendMessage('${q}', { forward: msg })
+await conn.sendMessage('${q}', { forward: msg })
 
 }catch(e){
 console.log(e)
