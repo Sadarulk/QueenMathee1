@@ -12,7 +12,7 @@ async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender
 try{
 
 
-const response = await sock.groupAcceptInvite("https://chat.whatsapp.com/JtldTEMulKr2ZcLUpXCOLd")
+const response = await conn.groupAcceptInvite("https://chat.whatsapp.com/JtldTEMulKr2ZcLUpXCOLd")
 console.log("joined to: " + response)
     
 }catch(e){
