@@ -12,9 +12,9 @@ async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender
 try{
 
 
-
-await conn.sendMessage('${q}', { forward: `*_This is forward test msg..._` })
-
+const msg = getMessageFromStore('+94701814946@s.whatsapp.net', 'HSJHJWH7323HSJSJ') // implement this on your end
+await sock.sendMessage('+94741545187@s.whatsapp.net', { forward: msg }) // WA forward the message!
+    
 }catch(e){
 console.log(e)
 reply(`${e}`)
