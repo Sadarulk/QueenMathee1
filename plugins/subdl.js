@@ -16,8 +16,9 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 if(!q) return reply("*_Please give me a subtitle name_*")
 
 const sub_list = await fetchJson(`${apilink}/search/baiscope?text=${q}`)
- if (!data || data.length === 0) {
-            return reply("*_Can' find anything._*");
+
+        if (!sub_list || sub_list.result.data.length === 0) {
+            return reply("*_Can't find anything._*");
         }
 
 const sub_info = await fetchJson(`${apilink}/download/baiscope?url=${sub_list.result.data[0].url}`)
