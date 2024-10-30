@@ -54,6 +54,10 @@ if (!q.startsWith("https://")) return reply("*_Please give me a xvideos.com url.
 
 const xv_info = await fetchJson(`${apilink}/download/xvideo?url=${q}`)
 
+        if (!xv_info || xv_info.result.dl_link.length === 0) {
+            return reply("*_Can't download your video._*");
+        }
+
 const msg = `*_QUEEN MATHEE XVIDEO DOWNLOADER 📥_*
 
 *ℹ Title:* ${xv_info.result.title}
