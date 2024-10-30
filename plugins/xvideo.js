@@ -21,7 +21,10 @@ const xv = await fetchJson(`${apilink}/search/xvideo?q=${q}`)
 
 
 const array = xv.result;
-if(xv.result.length < 0) return reply("*_Can't find anything !_*")
+        
+if (!xv || xv.length === 0) {
+            return reply("*_Can't find anything._*");
+        }
 
 const result = array.map((movie, index) => `${index + 1}. *Title :* ${array[index].title}\n*Duration :* ${array[index].duration}\n*Link :* ${array[index].url}`).join("\n\n");
 
