@@ -178,7 +178,7 @@ if (cmd) {
 if (cmd.react) conn.sendMessage(from, { react: { text: cmd.react, key: mek.key }})
 
 try {
-cmd.function(conn, mek, m,{from, fromm, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply});
+cmd.function(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply});
 } catch (e) {
 console.error("[PLUGIN ERROR] " + e);
 }
