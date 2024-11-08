@@ -19,8 +19,6 @@ if (!q) return reply("*_Please give me a apk name._*")
         //fetch data from api  
         const apk = await fetchJson(`https://api.nexoracle.com/downloader/apk?apikey=d2d02440c70a98a415&q=${q}`)
 
-        if (apk.result.startsWith("Your")) return reply("*_API key limit is over_* *:(*")
-
 const msg = `*_QUEEN MATHEE APK DOWNLOADER 📥_*
 
 *■ App name:* ${apk.result.name}
