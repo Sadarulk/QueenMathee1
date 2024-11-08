@@ -28,10 +28,6 @@ let news = `*_QUEEN MATHEE SPORTY NEWS 📰_*
 
 ■ ${data.description}
 
-■ ${data.author}
-
-■ ${data.link}
-
 > ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ`
 
 await conn.sendMessage(from,{image:{url: data.image},caption:news},{quoted:mek})
