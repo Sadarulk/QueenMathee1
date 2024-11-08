@@ -5,7 +5,7 @@ const { fetchJson } = require('../lib/functions')
 cmd({
     pattern: "hirunews",
     desc: "get hiru news",
-    category: "search",
+    category: "other",
     filename: __filename
 },
 async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
@@ -15,11 +15,11 @@ let data = await fetchJson(`https://dark-yasiya-api-new.vercel.app/news/hiru`)
 
 let news = `*_QUEEN MATHEE HIRU NEWS 📰_*
 
-■ *Title:* ${data.result.title}
+■ *${data.result.title}*
  
-■ *News:* ${data.result.desc}
- 
-■ *Link:* ${data.result.url}
+${data.result.desc}
+
+${data.result.url}
 
 > ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ`
 

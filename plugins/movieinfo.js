@@ -5,25 +5,16 @@ const { cmd, commands } = require('../command')
 const apilink = 'https://dark-yasiya-api-new.vercel.app'
 
 cmd({
-    pattern: "movie",
-    desc: "search movie",
+    pattern: "movie2",
+    desc: "get movie info",
     category: "movie",
     filename: __filename
 },
 async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
     try {
-    
-    if(!q) return reply("*_Please give me a movie name_*")
+    if (!q.startsWith("https://")) return reply("*_Please give me a sinhalasub.lk url._*")
 
-const mv_list = await fetchJson(`${apilink}/movie/sinhalasub/search?text=${q}`)
-
-        const array = mv_list.result.data;
-        
-        if (!array || array.length === 0) {
-            return reply("*_Can't find this movie._*");
-        }
-
-const mv_info = await fetchJson(`${apilink}/movie/sinhalasub/movie?url=${mv_list.result.data[0].link}`)
+const mv_info = await fetchJson(`${apilink}/movie/sinhalasub/movie?url=${q}`)
 
 const msg = `*_QUEEN MATHEE MOVIE DETAILS_* 🔎
 
@@ -42,8 +33,6 @@ const msg = `*_QUEEN MATHEE MOVIE DETAILS_* 🔎
 🔮 *IMDB Count:* ${mv_info.result.data.imdbVoteCount}
 
 🤵‍♂ *Director* : ${mv_info.result.data.director}
-
-🖇️ *Link* : ${mv_list.result.data[0].link}
 
 > ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ`
 
