@@ -39,3 +39,5 @@ await conn.sendMessage(from,{image:{url: data.image},caption:news},{quoted:mek})
 }catch(e){
 console.log(e)
 reply(`${e}`)
+}
+})
