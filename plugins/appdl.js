@@ -17,7 +17,7 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 if (!q) return reply("*_Please give me a apk name._*")
 
         //fetch data from api  
-        const apk = await fetchJson(`https://api.nexoracle.com/downloader/apk?apikey=d2d02440c70a98a415&q=${q}`)
+        const apk = await fetchJson(`https://api.nexoracle.com/downloader/apk?apikey=free_key@maher_apis&q=${q}`)
 
 const msg = `*_QUEEN MATHEE APK DOWNLOADER 📥_*
 
