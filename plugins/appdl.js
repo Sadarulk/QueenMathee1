@@ -17,20 +17,20 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 if (!q) return reply("*_Please give me a apk name._*")
 
         //fetch data from api  
-        const apk = await fetchJson(`https://api.nexoracle.com/downloader/apk?apikey=d2d02440c70a98a415&q=${q}`)
+        const apk = await fetchJson(`https://www.dark-yasiya-api.site/download/apk?id=${q}`)
 
 const msg = `*_QUEEN MATHEE APK DOWNLOADER 📥_*
 
 *■ App name:* ${apk.result.name}
-*■ Last update:* ${apk.result.lastup}
+*■ Last update:* ${apk.result.lastUpdate}
 *■ Size:* ${apk.result.size}
 *■ Package:* ${apk.result.package}
 
 > ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ`
 
-        await conn.sendMessage(from,{image:{url: apk.result.icon},caption:msg},{quoted:mek})
+        await conn.sendMessage(from,{image:{url: apk.result.image},caption:msg},{quoted:mek})
         //send apk
-        await conn.sendMessage(from,{document: {url: apk.result.dllink},mimetype:"application/vnd.android.package-archive",fileName: apk.result.name + ".apk"},{quoted:mek})
+        await conn.sendMessage(from,{document: {url: apk.result.dl_link},mimetype:"application/vnd.android.package-archive",fileName: apk.result.name + ".apk"},{quoted:mek})
          
 
 }catch(e){
