@@ -39,16 +39,16 @@ await conn.sendMessage(from,{image:{url: data.thumbnail},caption:desc},{quoted:m
     
 //download audio
 
-let detail = await fetchJson(`https://api.ibrahimadams.us.kg/api/download/ytmp3?url=${data.url}&apikey=ibraah-help`)
+let detail = await fetchJson(`https://www.dark-yasiya-api.site/download/ytmp3?url=${data.url}`)
 
 //send audio+document
 
-if (!detail || detail.result.download_url.length === 0) {
+if (!detail || detail.result.dl_link.length === 0) {
             return reply("*_Can't find anything._*");
         }
     
-await conn.sendMessage(from,{audio: {url:detail.result.download_url},mimetype:"audio/mpeg"},{quoted:mek})
-await conn.sendMessage(from,{document: {url:detail.result.download_url},mimetype:"audio/mpeg",fileName:data.title + ".mp3",caption:"> ɢᴇɴᴇʀᴀᴛᴇᴅ ʙʏ ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡᴀ ʙᴏᴛ"},{quoted:mek})
+await conn.sendMessage(from,{audio: {url:detail.result.dl_link},mimetype:"audio/mpeg"},{quoted:mek})
+await conn.sendMessage(from,{document: {url:detail.result.dl_link},mimetype:"audio/mpeg",fileName:data.title + ".mp3",caption:"> ɢᴇɴᴇʀᴀᴛᴇᴅ ʙʏ ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡᴀ ʙᴏᴛ"},{quoted:mek})
     
 }catch(e){
 console.log(e)
@@ -91,16 +91,16 @@ await conn.sendMessage(from,{image:{url: data.thumbnail},caption:desc},{quoted:m
     
 //download video
 
-let detail = await fetchJson(`https://api.ibrahimadams.us.kg/api/download/ytmp4?url=${data.url}&apikey=ibraah-help`)
+let detail = await fetchJson(`https://www.dark-yasiya-api.site/download/ytmp4?url=${data.url}&quality=360p`)
 
 //send video+document
 
-if (!detail || detail.result.download_url.length === 0) {
+if (!detail || detail.dl_link.length === 0) {
             return reply("*_Can't find anything._*");
         }
     
-await conn.sendMessage(from,{video: {url:detail.result.download_url},mimetype:"video/mp4"},{quoted:mek})
-await conn.sendMessage(from,{document: {url:detail.result.download_url},mimetype:"video/mp4",fileName:data.title + ".mp4",caption:"> ɢᴇɴᴇʀᴀᴛᴇᴅ ʙʏ ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡᴀ ʙᴏᴛ"},{quoted:mek})
+await conn.sendMessage(from,{video: {url:detail.dl_link},mimetype:"video/mp4"},{quoted:mek})
+await conn.sendMessage(from,{document: {url:detail.dl_link},mimetype:"video/mp4",fileName:data.title + ".mp4",caption:"> ɢᴇɴᴇʀᴀᴛᴇᴅ ʙʏ ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡᴀ ʙᴏᴛ"},{quoted:mek})
     
 }catch(e){
 console.log(e)
