@@ -21,9 +21,11 @@ const url = `${mv_info.result.data.dl_links[0].link}`;
 // Replace '/u/' with '/api/file/'
 const updatedUrl = url.replace('/u/', '/api/file/');
 
+const cap = `${mv_info.result.data.title} ( ${mv_info.result.data.dl_links[0].quality} )
 
-
-       await conn.sendMessage( id ,{document: {url: updatedUrl },mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption:"> ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴍᴏᴠɪᴇ ᴅʟ"})
+> ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇ ᴡᴏʀʟᴅ`
+        
+       await conn.sendMessage( id ,{document: {url: updatedUrl },mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption: ${cap}})
     
         
 }catch(e){
@@ -49,7 +51,11 @@ const url = `${mv_info.result.data.dl_links[1].link}`;
 // Replace '/u/' with '/api/file/'
 const updatedUrl = url.replace('/u/', '/api/file/');
 
-        await conn.sendMessage( id ,{document: {url: updatedUrl },mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption:"> ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴍᴏᴠɪᴇ ᴅʟ"})
+        const cap = `${mv_info.result.data.title} ( ${mv_info.result.data.dl_links[1].quality} )
+
+> ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇ ᴡᴏʀʟᴅ`
+
+        await conn.sendMessage( id ,{document: {url: updatedUrl },mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption: ${cap}})
         
 }catch(e){
 console.log(e)
@@ -74,7 +80,11 @@ const url = `${mv_info.result.data.dl_links[2].link}`;
 // Replace '/u/' with '/api/file/'
 const updatedUrl = url.replace('/u/', '/api/file/');
 
-        await conn.sendMessage( id ,{document: {url:updatedUrl},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption:"> ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴍᴏᴠɪᴇ ᴅʟ"})
+        const cap = `${mv_info.result.data.title} ( ${mv_info.result.data.dl_links[2].quality} )
+
+> ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇ ᴡᴏʀʟᴅ`
+
+        await conn.sendMessage( id ,{document: {url:updatedUrl},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption: ${cap}})
         
 }catch(e){
 console.log(e)
@@ -99,7 +109,11 @@ const url = `${mv_info.result.data.dl_links[3].link}`;
 // Replace '/u/' with '/api/file/'
 const updatedUrl = url.replace('/u/', '/api/file/');
 
-        await conn.sendMessage( id ,{document: {url:updatedUrl},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption:"> ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴍᴏᴠɪᴇ ᴅʟ"})
+        const cap = `${mv_info.result.data.title} ( ${mv_info.result.data.dl_links[3].quality} )
+
+> ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇ ᴡᴏʀʟᴅ`
+
+        await conn.sendMessage( id ,{document: {url:updatedUrl},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption: ${cap}})
         
 }catch(e){
 console.log(e)
