@@ -25,3 +25,26 @@ console.log(e)
 reply(`${e}`)
 }
 })
+
+const {readEnv} = require('../lib/database')
+const {cmd , commands} = require('../command')
+
+cmd({
+    pattern: "test",
+    desc: "test",
+    filename: __filename
+},
+async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
+try{
+
+    const id = `120363146004688322@g.us`
+
+    const msg = `_*Test Msg*_`
+
+ await conn.sendMessage( id ,{text: msg })
+  
+}catch(e){
+console.log(e)
+reply(`${e}`)
+}
+})
