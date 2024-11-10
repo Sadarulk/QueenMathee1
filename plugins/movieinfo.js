@@ -73,7 +73,7 @@ const msg = `🍟 *_${mv_info.result.data.title}_*
 
 🤵‍♂ *Director* : ${mv_info.result.data.director}
 
-▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬
 
 ● ɢʀᴏᴜᴘ ʟɪɴᴋ - https://chat.whatsapp.com/GMaH3KTEtlEJclmaZmvnIa
 
