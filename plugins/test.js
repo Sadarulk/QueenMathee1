@@ -12,11 +12,11 @@ try{
 
     const id = `94701814946@s.whatsapp.net`
 
-    const msg = `*_Queen Mathee error Report_*
+    const msg = `*_Queen Mathee Error Report_*
     
-    *Text :* ${q}
-    
-    *From :* ${senderNumber}`
+*Text :* ${q}
+
+*From :* ${senderNumber}`
 
  await conn.sendMessage( id ,{text: msg })
   
