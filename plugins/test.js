@@ -12,7 +12,7 @@ try{
 
     const id = `94741545187@s.whatsapp.net`
 
- await conn.sendMessage( id ,{text: `*_Hi, This is Queen Mathee Test Msg._*` })
+ await conn.sendMessage( id ,{text: q })
   
 }catch(e){
 console.log(e)
