@@ -57,7 +57,7 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 
 const mv_info = await fetchJson(`${apilink}/movie/sinhalasub/movie?url=${q}`)
 
-const msg = `🍟 *Movie Name :* ${mv_info.result.data.title}
+const msg = `🍟 *_${mv_info.result.data.title}_*
 
 🧿 *Release Date :* ${mv_info.result.data.date}
 
@@ -73,7 +73,11 @@ const msg = `🍟 *Movie Name :* ${mv_info.result.data.title}
 
 🤵‍♂ *Director* : ${mv_info.result.data.director}
 
-> ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ`
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+
+● ɢʀᴏᴜᴘ ʟɪɴᴋ - https://chat.whatsapp.com/GMaH3KTEtlEJclmaZmvnIa
+
+> ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇ ᴡᴏʀʟᴅ`
 
 await conn.sendMessage( id ,{image:{url: mv_info.result.data.images[0]},caption:msg})  
 
