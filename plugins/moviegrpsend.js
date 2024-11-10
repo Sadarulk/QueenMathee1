@@ -25,7 +25,7 @@ const cap = `${mv_info.result.data.title} ( ${mv_info.result.data.dl_links[0].qu
 
 > ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇ ᴡᴏʀʟᴅ`
         
-       await conn.sendMessage( id ,{document: {url: updatedUrl },mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption: ${cap}})
+       await conn.sendMessage( id ,{document: {url: updatedUrl },mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption: `${cap}`})
     
         
 }catch(e){
@@ -55,7 +55,7 @@ const updatedUrl = url.replace('/u/', '/api/file/');
 
 > ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇ ᴡᴏʀʟᴅ`
 
-        await conn.sendMessage( id ,{document: {url: updatedUrl },mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption: ${cap}})
+        await conn.sendMessage( id ,{document: {url: updatedUrl },mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption: `${cap}`})
         
 }catch(e){
 console.log(e)
@@ -84,7 +84,7 @@ const updatedUrl = url.replace('/u/', '/api/file/');
 
 > ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇ ᴡᴏʀʟᴅ`
 
-        await conn.sendMessage( id ,{document: {url:updatedUrl},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption: ${cap}})
+        await conn.sendMessage( id ,{document: {url:updatedUrl},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption: `${cap}`})
         
 }catch(e){
 console.log(e)
@@ -113,7 +113,7 @@ const updatedUrl = url.replace('/u/', '/api/file/');
 
 > ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇ ᴡᴏʀʟᴅ`
 
-        await conn.sendMessage( id ,{document: {url:updatedUrl},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption: ${cap}})
+        await conn.sendMessage( id ,{document: {url:updatedUrl},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption: `${cap}`})
         
 }catch(e){
 console.log(e)
@@ -133,7 +133,11 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 
 const mv_info = await fetchJson(`${apilink}/movie/sinhalasub/movie?url=${q}`)
 
-await conn.sendMessage( id ,{document: {url:mv_info.result.data.dl_links[3].link},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption:"> ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴍᴏᴠɪᴇ ᴅʟ"})
+        const cap = `${mv_info.result.data.title} ( ${mv_info.result.data.dl_links[3].quality} )
+
+> ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇ ᴡᴏʀʟᴅ`
+
+await conn.sendMessage( id ,{document: {url:mv_info.result.data.dl_links[3].link},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption: `${cap}`})
         
 }catch(e){
 console.log(e)
@@ -153,7 +157,11 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 
 const mv_info = await fetchJson(`${apilink}/movie/sinhalasub/movie?url=${q}`)
 
-await conn.sendMessage( id ,{document: {url:mv_info.result.data.dl_links[4].link},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption:"> ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴍᴏᴠɪᴇ ᴅʟ"})
+        const cap = `${mv_info.result.data.title} ( ${mv_info.result.data.dl_links[4].quality} )
+
+> ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇ ᴡᴏʀʟᴅ`
+
+await conn.sendMessage( id ,{document: {url:mv_info.result.data.dl_links[4].link},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption: `${cap}`})
         
 }catch(e){
 console.log(e)
@@ -173,7 +181,11 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 
 const mv_info = await fetchJson(`${apilink}/movie/sinhalasub/movie?url=${q}`)
 
-await conn.sendMessage( id ,{document: {url:mv_info.result.data.dl_links[5].link},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption:"> ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴍᴏᴠɪᴇ ᴅʟ"})
+        const cap = `${mv_info.result.data.title} ( ${mv_info.result.data.dl_links[5].quality} )
+
+> ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇ ᴡᴏʀʟᴅ`
+
+await conn.sendMessage( id ,{document: {url:mv_info.result.data.dl_links[5].link},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption: `$[cap}`})
         
 }catch(e){
 console.log(e)
@@ -193,7 +205,11 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 
 const mv_info = await fetchJson(`${apilink}/movie/sinhalasub/movie?url=${q}`)
 
-await conn.sendMessage( id ,{document: {url:mv_info.result.data.dl_links[6].link},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption:"> ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴍᴏᴠɪᴇ ᴅʟ"})
+        const cap = `${mv_info.result.data.title} ( ${mv_info.result.data.dl_links[6].quality} )
+
+> ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇ ᴡᴏʀʟᴅ`
+
+await conn.sendMessage( id ,{document: {url:mv_info.result.data.dl_links[6].link},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption: `${cap}`})
         
 }catch(e){
 console.log(e)
@@ -213,7 +229,11 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 
 const mv_info = await fetchJson(`${apilink}/movie/sinhalasub/movie?url=${q}`)
 
-await conn.sendMessage( id ,{document: {url:mv_info.result.data.dl_links[7].link},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption:"> ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴍᴏᴠɪᴇ ᴅʟ"})
+        const cap = `${mv_info.result.data.title} ( ${mv_info.result.data.dl_links[7].quality} )
+
+> ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇ ᴡᴏʀʟᴅ`
+
+await conn.sendMessage( id ,{document: {url:mv_info.result.data.dl_links[7].link},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption:`${cap}`})
         
 }catch(e){
 console.log(e)
@@ -233,7 +253,11 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 
 const mv_info = await fetchJson(`${apilink}/movie/sinhalasub/movie?url=${q}`)
 
-await conn.sendMessage( id ,{document: {url:mv_info.result.data.dl_links[8].link},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption:"> ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴍᴏᴠɪᴇ ᴅʟ"})
+        const cap = `${mv_info.result.data.title} ( ${mv_info.result.data.dl_links[8].quality} )
+
+> ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇ ᴡᴏʀʟᴅ`
+
+await conn.sendMessage( id ,{document: {url:mv_info.result.data.dl_links[8].link},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption: `${cap}`})
         
 }catch(e){
 console.log(e)
@@ -253,7 +277,11 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 
 const mv_info = await fetchJson(`${apilink}/movie/sinhalasub/movie?url=${q}`)
 
-await conn.sendMessage( id ,{document: {url:mv_info.result.data.dl_links[9].link},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption:"> ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴍᴏᴠɪᴇ ᴅʟ"})
+        const cap = `${mv_info.result.data.title} ( ${mv_info.result.data.dl_links[9].quality} )
+
+> ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇ ᴡᴏʀʟᴅ`
+
+await conn.sendMessage( id ,{document: {url:mv_info.result.data.dl_links[9].link},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption: `${cap}`})
         
 }catch(e){
 console.log(e)
@@ -273,7 +301,11 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 
 const mv_info = await fetchJson(`${apilink}/movie/sinhalasub/movie?url=${q}`)
 
-await conn.sendMessage( id ,{document: {url:mv_info.result.data.dl_links[10].link},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption:"> ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴍᴏᴠɪᴇ ᴅʟ"})
+        const cap = `${mv_info.result.data.title} ( ${mv_info.result.data.dl_links[10].quality} )
+
+> ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇ ᴡᴏʀʟᴅ`
+
+await conn.sendMessage( id ,{document: {url:mv_info.result.data.dl_links[10].link},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption: `${cap}`})
         
 }catch(e){
 console.log(e)
@@ -293,7 +325,11 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 
 const mv_info = await fetchJson(`${apilink}/movie/sinhalasub/movie?url=${q}`)
 
-await conn.sendMessage( id ,{document: {url:mv_info.result.data.dl_links[11].link},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption:"> ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴍᴏᴠɪᴇ ᴅʟ"})
+        const cap = `${mv_info.result.data.title} ( ${mv_info.result.data.dl_links[11].quality} )
+
+> ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇ ᴡᴏʀʟᴅ`
+
+await conn.sendMessage( id ,{document: {url:mv_info.result.data.dl_links[11].link},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption: `${cap}`})
         
 }catch(e){
 console.log(e)
