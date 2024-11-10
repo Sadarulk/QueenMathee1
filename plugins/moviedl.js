@@ -39,7 +39,7 @@ const msg = `*_🎬 QUEEN MATHEE MOVIE DOWNLOADER 🎬_*
 await conn.sendMessage(from,{image:{url: mv_info.result.data.images[0]},caption:msg},{quoted:mek})
 
 // Input URL
-const url = '${mv_info.result.data.dl_links[0].link}';
+const url = `${mv_info.result.data.dl_links[0].link}`;
 
 // Replace '/u/' with '/api/file/'
 const updatedUrl = url.replace('/u/', '/api/file/');
@@ -142,7 +142,7 @@ const msg = `*_🎬 QUEEN MATHEE MOVIE DOWNLOADER 🎬_*
 await conn.sendMessage(from,{image:{url: mv_info.result.data.images[0]},caption:msg},{quoted:mek})
 
 // Input URL
-const url = '${mv_info.result.data.dl_links[2].link}';
+const url = `${mv_info.result.data.dl_links[2].link}`;
 
 // Replace '/u/' with '/api/file/'
 const updatedUrl = url.replace('/u/', '/api/file/');
