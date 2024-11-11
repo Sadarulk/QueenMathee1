@@ -81,7 +81,7 @@ let tt = `*_QUEEN MATHEE TIKTOK DOWNLOADER 📥_*
         
         await conn.sendMessage(from, { video: { url: data.result.hdVideo }, mimetype: "video/mp4", caption: `*without WaterMark*\n\n${cap}` }, { quoted: mek })
         await conn.sendMessage(from, { video: { url: data.result.wmVideo }, mimetype: "video/mp4", caption: `*with WaterMark*\n\n${cap}` }, { quoted: mek }) 
-        await conn.sendMessage(from, { audio: { url: data.result.sound }, mimetype: "mpeg/mp3"}, { quoted: mek })
+        await conn.sendMessage(from, { audio: { url: data.result.sound }, mimetype: "audio/mpeg"}, {quoted:mek})
         
 
 } catch (e) {
