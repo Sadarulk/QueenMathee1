@@ -17,12 +17,6 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
         //fetch data from api  
         let data = await fetchJson(`https://dark-yasiya-api-new.vercel.app/download/fbdl1?url=${q}`)
 
-        const array = data.result;
-        
-        if (!array || array.length === 0) {
-            return reply("*_Can't find anything._*");
-        }
-
          let fb = `*_QUEEN MATHEE FACEBOOK DOWNLOADER 📥_*
 
 🖇️ Url : ${data.result.url}
