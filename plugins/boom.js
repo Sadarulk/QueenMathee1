@@ -21,7 +21,7 @@ let d = b[1]
 
 		await conn.sendMessage(from, { text : c })
 		
-    console.log(`${c}`)
+   
 }
 
 }catch(e){
@@ -53,7 +53,7 @@ let f = b[2]
 
 		await conn.sendMessage(f + "@s.whatsapp.net", { text : c })
 		
-    console.log(`${c}`)
+    
 }
 
 }catch(e){
