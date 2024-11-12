@@ -14,11 +14,11 @@ let s = q
 
 let p = s.split("&")
 
-console.log(p[0])
-console.log(p[1])
+let b = p[1]
+let c = p[0]
 	    
-	for (let i = 0; i < ${p[1]}; i++) {
-    console.log(`${p[0]}`);
+	for (let i = 0; i < b; i++) {
+    console.log(`${c}`);
 }
 
 		    
