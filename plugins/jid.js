@@ -1,12 +1,3 @@
-const {
-default: makeWASocket,
-useMultiFileAuthState,
-DisconnectReason,
-jidNormalizedUser,
-getContentType,
-fetchLatestBaileysVersion,
-Browsers
-} = require('@whiskeysockets/baileys')
 const config = require('../config')
 const { cmd, commands } = require('../command')
 
@@ -20,7 +11,7 @@ cmd({
 async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
     try {
 
- let deviceq = getDevice(mek.message.extendedTextMessage.contextInfo.stanzaId)
+ let deviceq = from
 
 reply(`${deviceq}`)
       
