@@ -207,33 +207,6 @@ command.function(conn, mek, m,{from, l, quoted, body, isCmd, command, args, q, i
 app.get("/", (req, res) => {
 res.send("hey, Queen Mathee wa bot started✅");
 });
-
-
-
-
-switch (command) {
-                case 'jid':
-                    reply(from)
-                    break
-                case 'device': {
-                    let deviceq = getDevice(mek.message.extendedTextMessage.contextInfo.stanzaId)
-
-                    reply("He Is Using Whatsapp " + deviceq + " version")
-                }
-                break
-                default:
-            }
-
-
-
-
-
-    
-
-
-
-
-
 app.listen(port, () => console.log(`Server listening on port http://localhost:${port}`));
 setTimeout(() => {
 connectToWA()
