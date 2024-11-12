@@ -18,7 +18,10 @@ let b = p[1]
 let c = p[0]
 	    
 	for (let i = 0; i < b; i++) {
-    console.log(`${c}`);
+
+		await conn.sendMessage(from, { text : c })
+		
+    console.log(`${c}`)
 }
 
 }catch(e){
