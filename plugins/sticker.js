@@ -18,8 +18,8 @@ try{
       var nameJpg = `sticker`
       isQuotedImage ? await m.quoted.download(nameJpg) : await m.download(nameJpg)
     let sticker = new Sticker(nameJpg + '.jpg', {
-      pack: pushname, // The pack name
-      author: 'SADARU', // The author name
+      pack: 'Created by', // The pack name
+      author: 'Sadaru', // The author name
       type: q.includes("--crop" || '-c') ? StickerTypes.CROPPED : StickerTypes.FULL,
       categories: ["🤩", "🎉"], // The sticker category
       id: "12345", // The sticker id
@@ -33,8 +33,8 @@ try{
     var nameWebp = `sticker`
     await m.quoted.download(nameWebp)
   let sticker = new Sticker(nameWebp + '.webp', {
-    pack: pushname, // The pack name
-    author: 'SADARU', // The author name
+    pack: 'Created by', // The pack name
+    author: 'Sadaru', // The author name
     type: q.includes("--crop" || '-c') ? StickerTypes.CROPPED : StickerTypes.FULL,
     categories: ["🤩", "🎉"], // The sticker category
     id: "12345", // The sticker id
