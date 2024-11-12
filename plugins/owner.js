@@ -12,10 +12,10 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
     try {
 
 const vcard = 'BEGIN:VCARD\n' // metadata of the contact card
-            + 'VERSION:4.0\n' 
-            + 'FN:Lakmal Sadaru\n' // full name
-            + 'ORG:Infinity WA Bot;\n' // the organization of the contact
-            + 'TEL;type=CELL;type=VOICE;waid=94701814946:+94 7018 14946\n' // WhatsApp ID + phone number
+            + 'VERSION:3.0\n' 
+            + 'FN:Sadaru\n' // full name
+            + 'ORG:INFINITY WA Bot;\n' // the organization of the contact
+            + 'TEL;type=CELL;type=VOICE;waid=94701814946:+94 70 181 4946\n' // WhatsApp ID + phone number
             + 'END:VCARD'
         
 await conn.sendMessage(from,{ contacts: { displayName: 'Sadaru', contacts: [{ vcard }] }})
