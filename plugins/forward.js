@@ -23,7 +23,7 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 
 	    if ((m.type === 'imageMessage') || isQuotedImage) {
 		    
-		    await conn.sendMessage( id ,{image: mek})
+		    await conn.sendMessage( id ,{image: args})
 
 }  
 }catch(e){
