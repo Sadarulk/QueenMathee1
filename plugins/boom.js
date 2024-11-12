@@ -21,10 +21,6 @@ let c = p[0]
     console.log(`${c}`);
 }
 
-		    
-		    
-
-}  
 }catch(e){
 console.log(e)
 reply(`${e}`)
