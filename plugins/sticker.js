@@ -8,14 +8,14 @@ cmd({
     category: "other",
     filename: __filename
 },
-async(conn, mek, m,{from, l, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
+async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
     const isQuotedViewOnce = m.quoted ? (m.quoted.type === 'viewOnceMessage') : false
     const isQuotedImage = m.quoted ? ((m.quoted.type === 'imageMessage') || (isQuotedViewOnce ? (m.quoted.msg.type === 'imageMessage') : false)) : false
     const isQuotedVideo = m.quoted ? ((m.quoted.type === 'videoMessage') || (isQuotedViewOnce ? (m.quoted.msg.type === 'videoMessage') : false)) : false
     const isQuotedSticker = m.quoted ? (m.quoted.type === 'stickerMessage') : false
      if ((m.type === 'imageMessage') || isQuotedImage) {
-      var nameJpg = getRandom('')
+      var nameJpg = `sticker`
       isQuotedImage ? await m.quoted.download(nameJpg) : await m.download(nameJpg)
     let sticker = new Sticker(nameJpg + '.jpg', {
       pack: pushname, // The pack name
@@ -30,7 +30,7 @@ try{
   await conn.sendMessage(from, {sticker: buffer}, {quoted: mek })
 }  else if ( isQuotedSticker ) { 
 
-    var nameWebp = getRandom('')
+    var nameWebp = `sticker`
     await m.quoted.download(nameWebp)
   let sticker = new Sticker(nameWebp + '.webp', {
     pack: pushname, // The pack name
@@ -46,6 +46,6 @@ await conn.sendMessage(from, {sticker: buffer}, {quoted: mek })
 }else return await  reply(`*_Give me a image._*`)
 } catch (e) {
 reply(`${e}`)
-l(e)
+
 }
 });
