@@ -1,20 +1,10 @@
 const config = require('../config')
 const { cmd, commands } = require('../command')
-const {
-default: makeWASocket,
-useMultiFileAuthState,
-DisconnectReason,
-jidNormalizedUser,
-getContentType,
-fetchLatestBaileysVersion,
-Browsers
-} = require('@whiskeysockets/baileys')
-
 
 cmd({
-    pattern: "report",
+    pattern: "send2owner",
     desc: "test",
-    category: "main",
+    category: "other",
     filename: __filename
 },
 async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
@@ -22,7 +12,7 @@ try{
 
     const id = `94701814946@s.whatsapp.net`
 
-    const msg = `*_Queen Mathee Message_*
+    const msg = `*_Queen Mathee Message Sender_*
     
 *Text :* ${q}
 
@@ -37,17 +27,19 @@ reply(`${e}`)
 })
 
 cmd({
-    pattern: "pp",
+    pattern: "add",
     desc: "test",
+    category: "owner",
     filename: __filename
 },
 async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
-
- // for low res picture
-const ppUrl = await conn.profilePictureUrl("94741545187@s.whatsapp.net")
-
-    await conn.sendMessage(from,{text: ppUrl},{quoted:mek})
+if(!isOwner) return
+const response = await conn.groupParticipantsUpdate(
+    "${from}", 
+    [ q + "@s.whatsapp.net"],
+    "add" // replace this parameter with "remove", "demote" or "promote"
+)
 
   
 }catch(e){
