@@ -13,7 +13,7 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 
 	if(!isOwner) return
     
-await conn.sendMessage(q, {forward: m.quoted })
+await conn.sendMessage(q, {forward: quoted })
 
 }catch(e){
 console.log(e)
