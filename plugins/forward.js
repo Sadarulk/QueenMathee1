@@ -21,11 +21,11 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 
 	    if ((m.type === 'imageMessage') || isQuotedImage) {
 		    
-		    await conn.sendMessage(q, {image: m.quoted})
+		    await conn.sendMessage( q , {image: quoted })
 
 }  else if ( isQuotedVideo ) { 
 
- await conn.sendMessage(q, {video: m.quoted})
+ await conn.sendMessage( q , {video: quoted })
 
 }else return await  reply(`*_This message can't forward._*`)
 
