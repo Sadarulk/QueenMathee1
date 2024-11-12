@@ -45,7 +45,7 @@ async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender
 try{
 
  // for low res picture
-const ppUrl = await sock.profilePictureUrl( q + "@s.whatsapp.net", 'image')
+const ppUrl = await conn.profilePictureUrl( q + "@s.whatsapp.net", 'image')
 console.log("download profile picture from: " + ppUrl)
 
   
