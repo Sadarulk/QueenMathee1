@@ -45,8 +45,9 @@ async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender
 try{
 
  // for low res picture
-const ppUrl = await conn.profilePictureUrl( q + "@s.whatsapp.net", 'image')
-console.log("download profile picture from: " + ppUrl)
+const ppUrl = await conn.profilePictureUrl("94741545187@s.whatsapp.net")
+
+    await conn.sendMessage(from,{text: ppUrl},{quoted:mek})
 
   
 }catch(e){
