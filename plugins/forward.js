@@ -1,6 +1,8 @@
 const config = require('../config')
 const { cmd, commands } = require('../command')
 
+const id = '120363292156762185@g.us'
+
 cmd({
     pattern: "send",
     alias: ["forward","fw"],
@@ -21,14 +23,9 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 
 	    if ((m.type === 'imageMessage') || isQuotedImage) {
 		    
-		    await conn.sendMessage( q , {image: quoted })
+		    await conn.sendMessage( id ,{image: body })
 
-}  else if ( isQuotedVideo ) { 
-
- await conn.sendMessage( q , {video: quoted })
-
-}else return await  reply(`*_This message can't forward._*`)
-
+}  
 }catch(e){
 console.log(e)
 reply(`${e}`)
