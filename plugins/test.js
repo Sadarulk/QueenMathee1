@@ -10,10 +10,11 @@ cmd({
 async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
 
-const msg = reply 
+const msg = quoted 
 const id = '120363292156762185@g.us'
 
-await conn.sendMessage( id , {text: msg})
+
+await conn.sendMessage(id,{text: msg})
 
 
 }catch(e){
