@@ -12,10 +12,10 @@ try{
 
 let num = q
 
-if (num > 55) return reply(`Pass`);
-} else {
+    if (num > 55) return reply(`Pass`);
+ else 
    return reply(`Fail`)
-}
+
 
 }catch(e){
 console.log(e)
