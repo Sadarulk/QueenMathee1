@@ -10,22 +10,19 @@ cmd({
 async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
 
-const msg = function checkNumber(q) {
+function checkNumber(q) {
     if (101 > q >= 75) {
-        return "A";
+        return reply("A");
     } else if (75 > q >= 65) {
-        return "B";
+        return reply("B");
     } else if (65 > q >= 55) {
-        return "C";
+        return reply("C");
     } else if (55 > q >= 35) {
-        return "S";
+        return reply("S");
     } else {
-        return "W";
+        return reply("W");
     }
 }
-
-await conn.sendMessage(from,{text: msg})
-
 
 }catch(e){
 console.log(e)
