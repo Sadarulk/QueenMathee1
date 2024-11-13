@@ -18,29 +18,7 @@ try{
 
 *From :* ${senderNumber}`
 
- await conn.sendMessage( id ,{text: msg })
-  
-}catch(e){
-console.log(e)
-reply(`${e}`)
-}
-})
-
-cmd({
-    pattern: "add",
-    desc: "test",
-    category: "owner",
-    filename: __filename
-},
-async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
-try{
-if(!isOwner) return
-const response = await conn.groupParticipantsUpdate(
-    "${from}", 
-    [ q + "@s.whatsapp.net"],
-    "add" // replace this parameter with "remove", "demote" or "promote"
-)
-
+ await conn.sendMessage( id ,{text: msg },{quoted : mek})
   
 }catch(e){
 console.log(e)
