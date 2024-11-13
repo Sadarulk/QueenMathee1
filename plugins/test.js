@@ -10,13 +10,10 @@ cmd({
 async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
 
-let num = 55
-    
-if(q > 'num'){
-    return reply(`Pass`)
-
+if (q > 55) {
+    console.log("Pass");
 } else {
-    return reply(`Fail`)
+    console.log("Fail");
 }
     
 }catch(e){
