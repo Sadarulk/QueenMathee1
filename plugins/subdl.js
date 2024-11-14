@@ -36,7 +36,8 @@ const msg = `*_QUEEN MATHEE SUBTITLE DOWNLOADER 📥_*
        
         await conn.sendMessage(from,{image:{url: sub_info.result.image},caption:msg},{quoted:mek})
         
-        await conn.sendMessage(from,{document: {url:sub_info.result.dl_link},mimetype:"application/vnd.rar",fileName:sub_info.result.title + ".rar"},{quoted:mek})
+        await conn.sendMessage(from,{document: {url:sub_info.result.dl_link},mimetype:"application/vnd.rar",fileName:sub_info.result.title + ".rar",caption: `*For PC users*`},{quoted:mek})
+        await conn.sendMessage(from,{document: {url:sub_info.result.dl_link},mimetype:"application/zip-compressed",fileName:sub_info.result.title + ".zip",caption: `*For mobile users*`},{quoted:mek})
           
 
 }catch(e){
