@@ -60,7 +60,7 @@ if (101 > q && q >= 75) {
     reply(`${C}`);
 } else if (55 > q && q >= 35) {
     reply(`${S}`);
-} else if (35 > q && q >= 0) {
+} else if (35 > q && q > 0) {
     reply(`${W}`);
 } else {
     reply(`*_Give me a valid mark._*`)
