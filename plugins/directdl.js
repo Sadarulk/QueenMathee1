@@ -3,7 +3,7 @@ const {cmd , commands} = require('../command')
 const { fetchJson } = require('../lib/functions')
 
 cmd({
-    pattern: "dl",
+    pattern: "dlv",
     desc: "download direct url",
     category: "download",
     filename: __filename
@@ -17,10 +17,8 @@ let b = a.split("&")
 
 let c = b[0]
 let d = b[1]
-
-let mvDl = `${c}`
     
-await conn.sendMessage(from,{document: {url:mvDl},mimetype:"video/mp4",fileName:${d} + ".mp4",caption:"> ɢᴇɴᴇʀᴀᴛᴇᴅ ʙʏ ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡᴀ ʙᴏᴛ"},{quoted:mek})
+await conn.sendMessage(from,{document: {url: c },mimetype:"video/mp4",fileName: d + ".mp4",caption:"> ɢᴇɴᴇʀᴀᴛᴇᴅ ʙʏ ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡᴀ ʙᴏᴛ"},{quoted:mek})
     
 }catch(e){
 console.log(e)
