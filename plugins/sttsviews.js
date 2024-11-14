@@ -12,6 +12,12 @@ cmd({
 async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
 
+let x = `*_Give me your details._*
+
+_Example :-_ .sttsviews *Name* & *City* & *Age*`
+    
+    if(!q) return reply(`${x}`)
+
 let a = q
 
 let b = a.split("&")
@@ -28,7 +34,7 @@ let msg = `Ｆᴏʀ ＳᴛΔᵀᴜs Ｖɪᴇᴡs "🙇🏻‍♀️❤️🖇️
 
 *⭕Age :* ${f}
   
-https://wa.me/${senderNumber}?text=Hii+${c}+(Stts+views)
+https://wa.me/${senderNumber}?text=(Stts+views)+Hii+${c}
 
 *_⭕save daganna hode_* ✍️🙈💬
 
