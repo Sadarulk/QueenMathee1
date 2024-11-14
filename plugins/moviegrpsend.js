@@ -185,7 +185,7 @@ const mv_info = await fetchJson(`${apilink}/movie/sinhalasub/movie?url=${q}`)
 
 > ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇ ᴡᴏʀʟᴅ`
 
-await conn.sendMessage( id ,{document: {url:mv_info.result.data.dl_links[5].link},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption: `$[cap}`})
+await conn.sendMessage( id ,{document: {url:mv_info.result.data.dl_links[5].link},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption: `${cap}`})
         
 }catch(e){
 console.log(e)
@@ -349,7 +349,11 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 
 const mv_info = await fetchJson(`${apilink}/movie/sinhalasub/movie?url=${q}`)
 
-await conn.sendMessage( id ,{document: {url:mv_info.result.data.dl_links[12].link},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption:"> ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴍᴏᴠɪᴇ ᴅʟ"})
+        const cap = `${mv_info.result.data.title} ( ${mv_info.result.data.dl_links[12].quality} )
+
+> ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇ ᴡᴏʀʟᴅ`
+
+await conn.sendMessage( id ,{document: {url:mv_info.result.data.dl_links[12].link},mimetype:"video/mp4",fileName:mv_info.result.data.title + ".mp4",caption:`${cap}`})
         
 }catch(e){
 console.log(e)
