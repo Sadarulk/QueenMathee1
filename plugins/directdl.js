@@ -11,9 +11,16 @@ cmd({
 async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
 
-let mvDl = `${q}`
+    let a = q
+
+let b = a.split("&")
+
+let c = b[0]
+let d = b[1]
+
+let mvDl = `${c}`
     
-await conn.sendMessage(from,{document: {url:mvDl},mimetype:"video/mp4",fileName: + ".mp4",caption:"> ɢᴇɴᴇʀᴀᴛᴇᴅ ʙʏ ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡᴀ ʙᴏᴛ"},{quoted:mek})
+await conn.sendMessage(from,{document: {url:mvDl},mimetype:"video/mp4",fileName:${d} + ".mp4",caption:"> ɢᴇɴᴇʀᴀᴛᴇᴅ ʙʏ ǫᴜᴇᴇɴ ᴍᴀᴛʜᴇᴇ ᴡᴀ ʙᴏᴛ"},{quoted:mek})
     
 }catch(e){
 console.log(e)
